@@ -5,7 +5,6 @@ kidsgramming-be/node_modules
 kidsgramming-be/public/hot
 kidsgramming-be/public/storage
 kidsgramming-be/storage/*.key
-kidsgramming-be/vendor
 kidsgramming-be/.env
 kidsgramming-be/.env.backup
 kidsgramming-be/.phpunit.result.cache
