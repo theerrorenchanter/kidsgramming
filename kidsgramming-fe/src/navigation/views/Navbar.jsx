@@ -1,16 +1,16 @@
 import AppBar from '@mui/material/AppBar'
 import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
+import Typography from '@mui/material/Typography'
 import SchoolIcon from '@mui/icons-material/School'
 
 import {
   brandIconStyles, brandNameStyles
-} from '../styles/navigation.js'
+} from '../styles/navigation'
 import { useNavRoutes } from '../hooks/useNavRoutes'
-import { ToggleMenu } from '../components/ToggleMenu.jsx'
-import { NavbarMenu } from '../components/NavbarMenu.jsx'
-import { UserMenu } from '../components/UserMenu.jsx'
+import { ToggleMenu } from '../components/ToggleMenu'
+import { NavbarMenu } from '../components/NavbarMenu'
+import { UserMenu } from '../components/UserMenu'
 
 export const Navbar = () => {
   const { routes } = useNavRoutes()
@@ -31,7 +31,7 @@ export const Navbar = () => {
           </Typography>
 
           <ToggleMenu routes={ routes }/>
-          <NavbarMenu routes={routes} />
+          <NavbarMenu routes={ routes } />
           <UserMenu />
 
         </Toolbar>

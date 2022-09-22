@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
+import PropTypes from 'prop-types'
 
-import { linksBoxStyles } from '../styles/navigation.js'
+import { linksBoxStyles } from '../styles/navigation'
 import { NavbarLink } from './links/NavbarLink'
 
 export const NavbarMenu = ({ routes }) => {
@@ -9,8 +10,12 @@ export const NavbarMenu = ({ routes }) => {
   return (
     <Box sx={ linksBoxStyles }>
         {routeKeys.map((routeKey) => (
-            <NavbarLink key={ routes[routeKey].description } route={routes[routeKey]} />
+            <NavbarLink key={ routeKey } route={routes[routeKey]} />
         ))}
     </Box>
   )
+}
+
+NavbarMenu.propTypes = {
+  routes: PropTypes.object.isRequired
 }

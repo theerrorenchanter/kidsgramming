@@ -3,7 +3,7 @@ import Typography from '@mui/material/Typography'
 import { Link as RouterLink } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import { linkStyles } from '../../styles/navigation.js'
+import { linkStyles } from '../../styles/navigation'
 
 export const NavbarLink = ({ route }) => {
   const { to, description } = route
@@ -15,4 +15,5 @@ export const NavbarLink = ({ route }) => {
 }
 
 NavbarLink.propTypes = {
+  route: PropTypes.object.isRequired
 }

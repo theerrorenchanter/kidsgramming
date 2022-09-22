@@ -13,4 +13,5 @@ export const ToggleLink = ({ route }) => {
 }
 
 ToggleLink.propTypes = {
+  route: PropTypes.object.isRequired
 }

@@ -1,14 +1,15 @@
 import MenuIcon from '@mui/icons-material/Menu'
-import Box from '@mui/material/Box'
+import SchoolIcon from '@mui/icons-material/School'
 import IconButton from '@mui/material/IconButton'
 import Typography from '@mui/material/Typography'
 import Menu from '@mui/material/Menu'
-import SchoolIcon from '@mui/icons-material/School'
+import Box from '@mui/material/Box'
+import PropTypes from 'prop-types'
 
 import {
   brandNameStylesSm,
   brandStylesSm, menuStyles, toggleBox
-} from '../styles/navigation.js'
+} from '../styles/navigation'
 import { useNavbar } from '../hooks/useNavbar'
 import { ToggleLinks } from './links/ToggleLinks'
 
@@ -58,4 +59,8 @@ export const ToggleMenu = ({ routes }) => {
         </Typography>
     </>
   )
+}
+
+ToggleMenu.propTypes = {
+  routes: PropTypes.object.isRequired
 }

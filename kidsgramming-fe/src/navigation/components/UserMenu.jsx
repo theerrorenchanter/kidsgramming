@@ -7,7 +7,16 @@ import Tooltip from '@mui/material/Tooltip'
 import { useNavbar } from '../hooks/useNavbar'
 import { ToggleLinks } from './links/ToggleLinks'
 
-const links = {}
+const routes = {
+  login: {
+    description: 'Login',
+    to: '/auth/login'
+  },
+  register: {
+    description: 'Register',
+    to: '/auth/register'
+  }
+}
 
 export const UserMenu = () => {
   const { handleOpenUserMenu, anchorElUser, handleCloseUserMenu } = useNavbar()
@@ -35,7 +44,7 @@ export const UserMenu = () => {
               }}
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu} >
-              <ToggleLinks handleCloseMenu={handleCloseUserMenu} routes={ links } />
+              <ToggleLinks handleCloseMenu={handleCloseUserMenu} routes={ routes } />
             </Menu>
           </Box>
   )

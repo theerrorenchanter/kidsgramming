@@ -8,10 +8,15 @@ export const ToggleLinks = ({ handleCloseMenu, routes }) => {
   return (
     <>
       {routeKeys.map(routeKey => (
-        <MenuItem key={routes[routeKey].description} onClick={ handleCloseMenu }>
+        <MenuItem key={routeKey} onClick={ handleCloseMenu }>
             <ToggleLink route={ routes[routeKey] } />
         </MenuItem>
       ))}
     </>
   )
+}
+
+ToggleLinks.propTypes = {
+  handleCloseMenu: PropTypes.func.isRequired,
+  routes: PropTypes.object.isRequired
 }
