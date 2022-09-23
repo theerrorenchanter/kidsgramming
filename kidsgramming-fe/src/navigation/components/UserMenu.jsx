@@ -19,33 +19,33 @@ const routes = {
 }
 
 export const UserMenu = () => {
-  const { handleOpenUserMenu, anchorElUser, handleCloseUserMenu } = useNavbar()
+  const { handleOpenNavMenu, anchorElNav, handleCloseNavMenu } = useNavbar()
 
   return (
     <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="User"/>
-              </IconButton>
-            </Tooltip>
+      <Tooltip title="Open settings">
+        <IconButton onClick={handleOpenNavMenu} sx={{ p: 0 }}>
+          <Avatar alt="User" />
+        </IconButton>
+      </Tooltip>
 
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right'
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right'
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu} >
-              <ToggleLinks handleCloseMenu={handleCloseUserMenu} routes={ routes } />
-            </Menu>
-          </Box>
+      <Menu
+        sx={{ mt: '45px' }}
+        id="menu-appbar"
+        anchorEl={anchorElNav}
+        anchorOrigin={{
+          vertical: 'top',
+          horizontal: 'right'
+        }}
+        keepMounted
+        transformOrigin={{
+          vertical: 'top',
+          horizontal: 'right'
+        }}
+        open={Boolean(anchorElNav)}
+        onClose={handleCloseNavMenu} >
+        <ToggleLinks handleCloseMenu={handleCloseNavMenu} routes={ routes } />
+      </Menu>
+    </Box>
   )
 }

@@ -2,7 +2,8 @@ import { Button } from '@mui/material'
 import PropTypes from 'prop-types'
 
 const styles = {
-  display: 'inline-block',
+  display: 'flex',
+  justifyContent: 'center',
   cursor: 'pointer',
   fontSize: '12pt',
   fontWeight: 'bold',
@@ -25,7 +26,8 @@ const styles = {
   }
 }
 
-export const SpecialButton = ({ children }) => {
+export const SpecialButton = ({ children, extraStyles }) => {
+  extraStyles.forEach((style) => { styles[style.key] = style.value })
   return (
     <Button sx={ styles }>
           { children }
@@ -34,5 +36,6 @@ export const SpecialButton = ({ children }) => {
 }
 
 SpecialButton.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
+  extraStyles: PropTypes.array
 }

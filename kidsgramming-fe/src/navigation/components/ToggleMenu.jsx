@@ -50,7 +50,7 @@ export const ToggleMenu = ({ routes }) => {
 
         <SchoolIcon sx={ brandStylesSm } />
         <Typography
-            variant="h5"
+            variant="span"
             noWrap
             component="a"
             href=""

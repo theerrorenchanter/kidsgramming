@@ -1,10 +1,9 @@
-import { Navbar } from './navigation/views/Navbar'
 import { AppTheme } from './theme/AppTheme'
-
+import { HomePage } from './home/pages/HomePage'
 export const KidsgrammingApp = () => {
   return (
     <AppTheme>
-      <Navbar />
+      <HomePage />
     </AppTheme>
   )
 }

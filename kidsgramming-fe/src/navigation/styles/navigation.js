@@ -5,7 +5,18 @@ export const brandIconStyles = {
 
 export const brandStylesSm = {
   display: { xs: 'flex', md: 'none' },
+
   mr: 1
+}
+
+export const brandNameStylesAuthenticated = {
+  mr: 2,
+  display: { xs: 'none', md: 'flex' },
+  fontFamily: 'monospace',
+  fontWeight: 700,
+  letterSpacing: '.3rem',
+  color: 'inherit',
+  textDecoration: 'none'
 }
 
 export const brandNameStyles = {
@@ -14,6 +25,7 @@ export const brandNameStyles = {
   fontFamily: 'monospace',
   fontWeight: 700,
   letterSpacing: '.3rem',
+  flexGrow: 1,
   color: 'inherit',
   textDecoration: 'none'
 }
