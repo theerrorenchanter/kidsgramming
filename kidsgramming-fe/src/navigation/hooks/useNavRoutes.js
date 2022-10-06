@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
+import { authenticationStatuses } from '../../store/auth/authSlice'
 
 const notAuthenticatedRoutes = {
   home: {
@@ -31,10 +33,12 @@ const initialState = {
 export const useNavRoutes = (init = initialState) => {
   const [authenticated, setAuthenticated] = useState(init.authenticated)
   const [routes, setRoutes] = useState(init.routes)
+  const { status } = useSelector(state => state.auth)
 
   useEffect(() => {
+    setAuthenticated(status === authenticationStatuses.authenticated)
     authenticated ? setRoutes(authenticatedRoutes) : setRoutes(notAuthenticatedRoutes)
-  }, [authenticated])
+  }, [status])
 
   return {
     routes,

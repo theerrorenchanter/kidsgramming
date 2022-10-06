@@ -26,16 +26,18 @@ const styles = {
   }
 }
 
-export const SpecialButton = ({ children, extraStyles }) => {
-  extraStyles.forEach((style) => { styles[style.key] = style.value })
+export const SpecialButton = ({ children, extraStyles, component, to }) => {
+  extraStyles?.forEach((style) => { styles[style.key] = style.value })
   return (
-    <Button sx={ styles }>
-          { children }
+    <Button component={component} to={to} sx={ styles }>
+      { children }
     </Button>
   )
 }
 
 SpecialButton.propTypes = {
   children: PropTypes.string.isRequired,
-  extraStyles: PropTypes.array
+  extraStyles: PropTypes.array,
+  component: PropTypes.object,
+  to: PropTypes.string
 }
