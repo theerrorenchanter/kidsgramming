@@ -1,21 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Footer from './components/footer/Footer'
-import Inicio from './components/paginas/Inicio'
-import Login from './components/paginas/Login'
-import Registro from './components/paginas/Registro'
 
+import { BrowserRouter } from 'react-router-dom'
+import { Provider } from 'react-redux'
+
+import { KidsgrammingApp } from './KidsgrammingApp'
+import { store } from './store/store'
 
 ReactDOM.createRoot(document.querySelector('#root')).render(
-  <React.StrictMode>
+  <Provider store={store}>
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Inicio/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/registro" element={<Registro/>} />
-      </Routes>
+      <KidsgrammingApp />
     </BrowserRouter>
-    <Footer/>
-  </React.StrictMode>
+  </Provider>
 )
