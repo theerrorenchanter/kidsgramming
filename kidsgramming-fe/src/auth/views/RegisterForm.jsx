@@ -9,7 +9,6 @@ import { Link as RouterLink } from 'react-router-dom'
 import { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 
-import { CountrySelect } from '../components/CountrySelect'
 import { AuthFormLayout } from '../layout/AuthFormLayout'
 import { authenticationStatuses } from '../../store/auth/authSlice'
 
@@ -34,14 +33,6 @@ export const RegisterForm = ({ authForm }) => {
               helperText={ touched.name && errors.name }
               onChange={handleChange}
               value={ values.name } />
-          </Grid>
-
-          <Grid item xs={12} sx={{ mt: 2 }}>
-            <CountrySelect
-              touched={touched}
-              errors={errors}
-              handleChange={handleChange}
-              values={values} />
           </Grid>
 
           <Grid item xs={12} sx={{ mt: 2 }}>

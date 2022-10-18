@@ -7,7 +7,7 @@ export const startUsernamePasswordLogin = data => {
 
     const result = await loginUserWithUsernamePassword(data)
 
-    if (!result.ok) return dispatch(logout())
+    if (!result.ok) return dispatch(logout(result))
 
     dispatch(login(result))
   }
@@ -19,7 +19,7 @@ export const startCreatingUserWithUsernamePassword = data => {
 
     const result = await registerUserWithUsernamePassword(data)
 
-    if (!result.ok) return dispatch(logout())
+    if (!result.ok) return dispatch(logout(result))
 
     dispatch(login(result))
   }

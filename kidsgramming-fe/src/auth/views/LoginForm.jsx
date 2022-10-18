@@ -27,12 +27,12 @@ export const LoginForm = ({ authForm }) => {
               fullWidth
               label='Sponsor'
               placeholder='hoguni'
-              name='sponsor'
-              id='sponsor'
-              error={ touched.sponsor && Boolean(errors.sponsor) }
-              helperText={ touched.sponsor && errors.sponsor }
+              name='user_sponsor'
+              id='user_sponsor'
+              error={ touched.user_sponsor && Boolean(errors.user_sponsor) }
+              helperText={ touched.user_sponsor && errors.user_sponsor }
               onChange={handleChange}
-              value={ values.sponsor } />
+              value={ values.user_sponsor } />
           </Grid>
 
           <Grid item xs={12} sx={{ mt: 2 }}>
