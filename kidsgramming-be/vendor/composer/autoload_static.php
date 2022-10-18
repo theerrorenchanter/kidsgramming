@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
+class ComposerStaticInit13a34c0668d836240a505abd57870ddb
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -17,25 +17,23 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
         'a4a119a56e50fbb293281d9a48007e0e' => __DIR__ . '/..' . '/symfony/polyfill-php80/bootstrap.php',
-        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
         '3bd81c9b8fcc150b69d8b63b4d2ccf23' => __DIR__ . '/..' . '/spatie/flare-client-php/src/helpers.php',
-        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
-        '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
-        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
+        '23c18046f52bef3eea034657bafda50f' => __DIR__ . '/..' . '/symfony/polyfill-php81/bootstrap.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
-        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        'a1105708a18b76903365ca1c4aa61b02' => __DIR__ . '/..' . '/symfony/translation/Resources/functions.php',
         'c964ee0ededf28c96ebd9db5099ef910' => __DIR__ . '/..' . '/guzzlehttp/promises/src/functions_include.php',
+        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '35a6ad97d21e794e7e22a17d806652e4' => __DIR__ . '/..' . '/nunomaduro/termwind/src/Functions.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
+        'e39a8b23c42d4e1452234d762b03835a' => __DIR__ . '/..' . '/ramsey/uuid/src/functions.php',
+        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
         '265b4faa2b3a9766332744949e83bf97' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Collections/helpers.php',
         'c7a3c339e7e14b60e06a2d7fcce9476b' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Events/functions.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        'f83ed111c2f97a0449abf067f157f418' => __DIR__ . '/..' . '/pestphp/pest/src/Functions.php',
-        '7d2876738dc0328edeb8a103c76cd8e7' => __DIR__ . '/..' . '/pestphp/pest/src/Pest.php',
-        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
-        '37a3dc5111fe8f707ab4c132ef1dbc62' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/functions_include.php',
-        'd634523d799d97a8ab4807b650bf5cea' => __DIR__ . '/..' . '/pestphp/pest-plugin-laravel/src/Autoload.php',
+        'ec07570ca5a812141189b1fa81503674' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert/Functions.php',
         '320163ac6b93aebe3dc25b60a0533d56' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/helpers.php',
+        '377b22b161c09ed6e5152de788ca020a' => __DIR__ . '/..' . '/spatie/laravel-permission/src/helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -81,6 +79,7 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
             'Symfony\\Component\\ErrorHandler\\' => 31,
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
+            'Spatie\\Permission\\' => 18,
             'Spatie\\LaravelIgnition\\' => 23,
             'Spatie\\Ignition\\' => 16,
             'Spatie\\FlareClient\\' => 19,
@@ -102,9 +101,6 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
             'Psr\\Container\\' => 14,
             'PhpParser\\' => 10,
             'PhpOption\\' => 10,
-            'Pest\\Plugin\\' => 12,
-            'Pest\\Laravel\\' => 13,
-            'Pest\\' => 5,
         ),
         'N' => 
         array (
@@ -297,6 +293,10 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         array (
             0 => __DIR__ . '/..' . '/symfony/console',
         ),
+        'Spatie\\Permission\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-permission/src',
+        ),
         'Spatie\\LaravelIgnition\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
@@ -335,8 +335,8 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -357,18 +357,6 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'PhpOption\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
-        ),
-        'Pest\\Plugin\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pestphp/pest-plugin/src',
-        ),
-        'Pest\\Laravel\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pestphp/pest-plugin-laravel/src',
-        ),
-        'Pest\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/pestphp/pest/src',
         ),
         'NunoMaduro\\Collision\\' => 
         array (
@@ -514,7 +502,6 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
-        'App\\Http\\Controllers\\BookController' => __DIR__ . '/../..' . '/app/Http/Controllers/BookController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
@@ -527,10 +514,7 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Http\\Requests\\SearchBookRequest' => __DIR__ . '/../..' . '/app/Http/Requests/SearchBookRequest.php',
-        'App\\Http\\Requests\\StoreBookRequest' => __DIR__ . '/../..' . '/app/Http/Requests/StoreBookRequest.php',
-        'App\\Http\\Requests\\UpdateBookRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UpdateBookRequest.php',
-        'App\\Models\\Book' => __DIR__ . '/../..' . '/app/Models/Book.php',
+        'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -642,8 +626,7 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'Cron\\HoursField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/HoursField.php',
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
-        'Database\\Factories\\BookFactory' => __DIR__ . '/../..' . '/database/factories/BookFactory.php',
-        'Database\\Seeders\\BookSeeder' => __DIR__ . '/../..' . '/database/seeders/BookSeeder.php',
+        'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
@@ -1642,6 +1625,7 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'Illuminate\\Console\\Concerns\\CreatesMatchingTest' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/CreatesMatchingTest.php',
         'Illuminate\\Console\\Concerns\\HasParameters' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/HasParameters.php',
         'Illuminate\\Console\\Concerns\\InteractsWithIO' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/InteractsWithIO.php',
+        'Illuminate\\Console\\Concerns\\InteractsWithSignals' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Concerns/InteractsWithSignals.php',
         'Illuminate\\Console\\ConfirmableTrait' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/ConfirmableTrait.php',
         'Illuminate\\Console\\ContainerCommandLoader' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/ContainerCommandLoader.php',
         'Illuminate\\Console\\Contracts\\NewLineAware' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Contracts/NewLineAware.php',
@@ -1673,6 +1657,7 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'Illuminate\\Console\\Scheduling\\ScheduleTestCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleTestCommand.php',
         'Illuminate\\Console\\Scheduling\\ScheduleWorkCommand' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Scheduling/ScheduleWorkCommand.php',
         'Illuminate\\Console\\Scheduling\\SchedulingMutex' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Scheduling/SchedulingMutex.php',
+        'Illuminate\\Console\\Signals' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/Signals.php',
         'Illuminate\\Console\\View\\Components\\Alert' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/View/Components/Alert.php',
         'Illuminate\\Console\\View\\Components\\BulletList' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/View/Components/BulletList.php',
         'Illuminate\\Console\\View\\Components\\Choice' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Console/View/Components/Choice.php',
@@ -1989,6 +1974,7 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'Illuminate\\Database\\Query\\Processors\\SqlServerProcessor' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Query/Processors/SqlServerProcessor.php',
         'Illuminate\\Database\\RecordsNotFoundException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/RecordsNotFoundException.php',
         'Illuminate\\Database\\SQLiteConnection' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/SQLiteConnection.php',
+        'Illuminate\\Database\\SQLiteDatabaseDoesNotExistException' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/SQLiteDatabaseDoesNotExistException.php',
         'Illuminate\\Database\\Schema\\Blueprint' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Schema/Blueprint.php',
         'Illuminate\\Database\\Schema\\Builder' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Schema/Builder.php',
         'Illuminate\\Database\\Schema\\ColumnDefinition' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Database/Schema/ColumnDefinition.php',
@@ -3638,84 +3624,6 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'PHPUnit\\Util\\Xml\\SuccessfulSchemaDetectionResult' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/SuccessfulSchemaDetectionResult.php',
         'PHPUnit\\Util\\Xml\\ValidationResult' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/ValidationResult.php',
         'PHPUnit\\Util\\Xml\\Validator' => __DIR__ . '/..' . '/phpunit/phpunit/src/Util/Xml/Validator.php',
-        'Pest\\Actions\\AddsDefaults' => __DIR__ . '/..' . '/pestphp/pest/src/Actions/AddsDefaults.php',
-        'Pest\\Actions\\AddsTests' => __DIR__ . '/..' . '/pestphp/pest/src/Actions/AddsTests.php',
-        'Pest\\Actions\\InteractsWithPlugins' => __DIR__ . '/..' . '/pestphp/pest/src/Actions/InteractsWithPlugins.php',
-        'Pest\\Actions\\LoadStructure' => __DIR__ . '/..' . '/pestphp/pest/src/Actions/LoadStructure.php',
-        'Pest\\Actions\\ValidatesConfiguration' => __DIR__ . '/..' . '/pestphp/pest/src/Actions/ValidatesConfiguration.php',
-        'Pest\\Actions\\ValidatesEnvironment' => __DIR__ . '/..' . '/pestphp/pest/src/Actions/ValidatesEnvironment.php',
-        'Pest\\Concerns\\Expectable' => __DIR__ . '/..' . '/pestphp/pest/src/Concerns/Expectable.php',
-        'Pest\\Concerns\\Extendable' => __DIR__ . '/..' . '/pestphp/pest/src/Concerns/Extendable.php',
-        'Pest\\Concerns\\Logging\\WritesToConsole' => __DIR__ . '/..' . '/pestphp/pest/src/Concerns/Logging/WritesToConsole.php',
-        'Pest\\Concerns\\RetrievesValues' => __DIR__ . '/..' . '/pestphp/pest/src/Concerns/RetrievesValues.php',
-        'Pest\\Concerns\\Testable' => __DIR__ . '/..' . '/pestphp/pest/src/Concerns/Testable.php',
-        'Pest\\Console\\Command' => __DIR__ . '/..' . '/pestphp/pest/src/Console/Command.php',
-        'Pest\\Console\\Help' => __DIR__ . '/..' . '/pestphp/pest/src/Console/Help.php',
-        'Pest\\Console\\Thanks' => __DIR__ . '/..' . '/pestphp/pest/src/Console/Thanks.php',
-        'Pest\\Contracts\\HasPrintableTestCaseName' => __DIR__ . '/..' . '/pestphp/pest/src/Contracts/HasPrintableTestCaseName.php',
-        'Pest\\Contracts\\Plugins\\AddsOutput' => __DIR__ . '/..' . '/pestphp/pest/src/Contracts/Plugins/AddsOutput.php',
-        'Pest\\Contracts\\Plugins\\HandlesArguments' => __DIR__ . '/..' . '/pestphp/pest/src/Contracts/Plugins/HandlesArguments.php',
-        'Pest\\Datasets' => __DIR__ . '/..' . '/pestphp/pest/src/Datasets.php',
-        'Pest\\Each' => __DIR__ . '/..' . '/pestphp/pest/src/Each.php',
-        'Pest\\Exceptions\\AfterAllAlreadyExist' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/AfterAllAlreadyExist.php',
-        'Pest\\Exceptions\\AfterEachAlreadyExist' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/AfterEachAlreadyExist.php',
-        'Pest\\Exceptions\\AttributeNotSupportedYet' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/AttributeNotSupportedYet.php',
-        'Pest\\Exceptions\\BeforeEachAlreadyExist' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/BeforeEachAlreadyExist.php',
-        'Pest\\Exceptions\\DatasetAlreadyExist' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/DatasetAlreadyExist.php',
-        'Pest\\Exceptions\\DatasetDoesNotExist' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/DatasetDoesNotExist.php',
-        'Pest\\Exceptions\\DatasetMissing' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/DatasetMissing.php',
-        'Pest\\Exceptions\\FileOrFolderNotFound' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/FileOrFolderNotFound.php',
-        'Pest\\Exceptions\\InvalidConsoleArgument' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/InvalidConsoleArgument.php',
-        'Pest\\Exceptions\\InvalidPestCommand' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/InvalidPestCommand.php',
-        'Pest\\Exceptions\\MissingDependency' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/MissingDependency.php',
-        'Pest\\Exceptions\\ShouldNotHappen' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/ShouldNotHappen.php',
-        'Pest\\Exceptions\\TestAlreadyExist' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/TestAlreadyExist.php',
-        'Pest\\Exceptions\\TestCaseAlreadyInUse' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/TestCaseAlreadyInUse.php',
-        'Pest\\Exceptions\\TestCaseClassOrTraitNotFound' => __DIR__ . '/..' . '/pestphp/pest/src/Exceptions/TestCaseClassOrTraitNotFound.php',
-        'Pest\\Expectation' => __DIR__ . '/..' . '/pestphp/pest/src/Expectation.php',
-        'Pest\\Factories\\TestCaseFactory' => __DIR__ . '/..' . '/pestphp/pest/src/Factories/TestCaseFactory.php',
-        'Pest\\HigherOrderExpectation' => __DIR__ . '/..' . '/pestphp/pest/src/HigherOrderExpectation.php',
-        'Pest\\Laravel\\Commands\\PestDatasetCommand' => __DIR__ . '/..' . '/pestphp/pest/src/Laravel/Commands/PestDatasetCommand.php',
-        'Pest\\Laravel\\Commands\\PestDuskCommand' => __DIR__ . '/..' . '/pestphp/pest/src/Laravel/Commands/PestDuskCommand.php',
-        'Pest\\Laravel\\Commands\\PestInstallCommand' => __DIR__ . '/..' . '/pestphp/pest/src/Laravel/Commands/PestInstallCommand.php',
-        'Pest\\Laravel\\Commands\\PestTestCommand' => __DIR__ . '/..' . '/pestphp/pest/src/Laravel/Commands/PestTestCommand.php',
-        'Pest\\Laravel\\PestServiceProvider' => __DIR__ . '/..' . '/pestphp/pest/src/Laravel/PestServiceProvider.php',
-        'Pest\\Logging\\JUnit' => __DIR__ . '/..' . '/pestphp/pest/src/Logging/JUnit.php',
-        'Pest\\Logging\\TeamCity' => __DIR__ . '/..' . '/pestphp/pest/src/Logging/TeamCity.php',
-        'Pest\\OppositeExpectation' => __DIR__ . '/..' . '/pestphp/pest/src/OppositeExpectation.php',
-        'Pest\\PendingObjects\\AfterEachCall' => __DIR__ . '/..' . '/pestphp/pest/src/PendingObjects/AfterEachCall.php',
-        'Pest\\PendingObjects\\BeforeEachCall' => __DIR__ . '/..' . '/pestphp/pest/src/PendingObjects/BeforeEachCall.php',
-        'Pest\\PendingObjects\\TestCall' => __DIR__ . '/..' . '/pestphp/pest/src/PendingObjects/TestCall.php',
-        'Pest\\PendingObjects\\UsesCall' => __DIR__ . '/..' . '/pestphp/pest/src/PendingObjects/UsesCall.php',
-        'Pest\\Plugin' => __DIR__ . '/..' . '/pestphp/pest/src/Plugin.php',
-        'Pest\\Plugin\\Commands\\DumpCommand' => __DIR__ . '/..' . '/pestphp/pest-plugin/src/Commands/DumpCommand.php',
-        'Pest\\Plugin\\Loader' => __DIR__ . '/..' . '/pestphp/pest-plugin/src/Loader.php',
-        'Pest\\Plugin\\Manager' => __DIR__ . '/..' . '/pestphp/pest-plugin/src/Manager.php',
-        'Pest\\Plugin\\PestCommandProvider' => __DIR__ . '/..' . '/pestphp/pest-plugin/src/PestCommandProvider.php',
-        'Pest\\Plugins\\Coverage' => __DIR__ . '/..' . '/pestphp/pest/src/Plugins/Coverage.php',
-        'Pest\\Plugins\\Environment' => __DIR__ . '/..' . '/pestphp/pest/src/Plugins/Environment.php',
-        'Pest\\Plugins\\Init' => __DIR__ . '/..' . '/pestphp/pest/src/Plugins/Init.php',
-        'Pest\\Plugins\\Version' => __DIR__ . '/..' . '/pestphp/pest/src/Plugins/Version.php',
-        'Pest\\Repositories\\AfterAllRepository' => __DIR__ . '/..' . '/pestphp/pest/src/Repositories/AfterAllRepository.php',
-        'Pest\\Repositories\\AfterEachRepository' => __DIR__ . '/..' . '/pestphp/pest/src/Repositories/AfterEachRepository.php',
-        'Pest\\Repositories\\BeforeAllRepository' => __DIR__ . '/..' . '/pestphp/pest/src/Repositories/BeforeAllRepository.php',
-        'Pest\\Repositories\\BeforeEachRepository' => __DIR__ . '/..' . '/pestphp/pest/src/Repositories/BeforeEachRepository.php',
-        'Pest\\Repositories\\TestRepository' => __DIR__ . '/..' . '/pestphp/pest/src/Repositories/TestRepository.php',
-        'Pest\\Support\\Arr' => __DIR__ . '/..' . '/pestphp/pest/src/Support/Arr.php',
-        'Pest\\Support\\Backtrace' => __DIR__ . '/..' . '/pestphp/pest/src/Support/Backtrace.php',
-        'Pest\\Support\\ChainableClosure' => __DIR__ . '/..' . '/pestphp/pest/src/Support/ChainableClosure.php',
-        'Pest\\Support\\Container' => __DIR__ . '/..' . '/pestphp/pest/src/Support/Container.php',
-        'Pest\\Support\\Coverage' => __DIR__ . '/..' . '/pestphp/pest/src/Support/Coverage.php',
-        'Pest\\Support\\ExceptionTrace' => __DIR__ . '/..' . '/pestphp/pest/src/Support/ExceptionTrace.php',
-        'Pest\\Support\\Extendable' => __DIR__ . '/..' . '/pestphp/pest/src/Support/Extendable.php',
-        'Pest\\Support\\HigherOrderCallables' => __DIR__ . '/..' . '/pestphp/pest/src/Support/HigherOrderCallables.php',
-        'Pest\\Support\\HigherOrderMessage' => __DIR__ . '/..' . '/pestphp/pest/src/Support/HigherOrderMessage.php',
-        'Pest\\Support\\HigherOrderMessageCollection' => __DIR__ . '/..' . '/pestphp/pest/src/Support/HigherOrderMessageCollection.php',
-        'Pest\\Support\\HigherOrderTapProxy' => __DIR__ . '/..' . '/pestphp/pest/src/Support/HigherOrderTapProxy.php',
-        'Pest\\Support\\NullClosure' => __DIR__ . '/..' . '/pestphp/pest/src/Support/NullClosure.php',
-        'Pest\\Support\\Reflection' => __DIR__ . '/..' . '/pestphp/pest/src/Support/Reflection.php',
-        'Pest\\Support\\Str' => __DIR__ . '/..' . '/pestphp/pest/src/Support/Str.php',
-        'Pest\\TestSuite' => __DIR__ . '/..' . '/pestphp/pest/src/TestSuite.php',
         'PharIo\\Manifest\\Application' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Application.php',
         'PharIo\\Manifest\\ApplicationName' => __DIR__ . '/..' . '/phar-io/manifest/src/values/ApplicationName.php',
         'PharIo\\Manifest\\Author' => __DIR__ . '/..' . '/phar-io/manifest/src/values/Author.php',
@@ -4596,6 +4504,7 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'SebastianBergmann\\Type\\NeverType' => __DIR__ . '/..' . '/sebastian/type/src/type/NeverType.php',
         'SebastianBergmann\\Type\\NullType' => __DIR__ . '/..' . '/sebastian/type/src/type/NullType.php',
         'SebastianBergmann\\Type\\ObjectType' => __DIR__ . '/..' . '/sebastian/type/src/type/ObjectType.php',
+        'SebastianBergmann\\Type\\Parameter' => __DIR__ . '/..' . '/sebastian/type/src/Parameter.php',
         'SebastianBergmann\\Type\\ReflectionMapper' => __DIR__ . '/..' . '/sebastian/type/src/ReflectionMapper.php',
         'SebastianBergmann\\Type\\RuntimeException' => __DIR__ . '/..' . '/sebastian/type/src/exception/RuntimeException.php',
         'SebastianBergmann\\Type\\SimpleType' => __DIR__ . '/..' . '/sebastian/type/src/type/SimpleType.php',
@@ -4753,6 +4662,33 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'Spatie\\LaravelIgnition\\Support\\StringComparator' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/StringComparator.php',
         'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
         'Spatie\\LaravelIgnition\\Views\\ViewExceptionMapper' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/ViewExceptionMapper.php',
+        'Spatie\\Permission\\Commands\\CacheReset' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CacheReset.php',
+        'Spatie\\Permission\\Commands\\CreatePermission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CreatePermission.php',
+        'Spatie\\Permission\\Commands\\CreateRole' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/CreateRole.php',
+        'Spatie\\Permission\\Commands\\Show' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/Show.php',
+        'Spatie\\Permission\\Commands\\UpgradeForTeams' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Commands/UpgradeForTeams.php',
+        'Spatie\\Permission\\Contracts\\Permission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Contracts/Permission.php',
+        'Spatie\\Permission\\Contracts\\Role' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Contracts/Role.php',
+        'Spatie\\Permission\\Exceptions\\GuardDoesNotMatch' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/GuardDoesNotMatch.php',
+        'Spatie\\Permission\\Exceptions\\PermissionAlreadyExists' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/PermissionAlreadyExists.php',
+        'Spatie\\Permission\\Exceptions\\PermissionDoesNotExist' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/PermissionDoesNotExist.php',
+        'Spatie\\Permission\\Exceptions\\RoleAlreadyExists' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/RoleAlreadyExists.php',
+        'Spatie\\Permission\\Exceptions\\RoleDoesNotExist' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/RoleDoesNotExist.php',
+        'Spatie\\Permission\\Exceptions\\UnauthorizedException' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/UnauthorizedException.php',
+        'Spatie\\Permission\\Exceptions\\WildcardPermissionInvalidArgument' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/WildcardPermissionInvalidArgument.php',
+        'Spatie\\Permission\\Exceptions\\WildcardPermissionNotProperlyFormatted' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Exceptions/WildcardPermissionNotProperlyFormatted.php',
+        'Spatie\\Permission\\Guard' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Guard.php',
+        'Spatie\\Permission\\Middlewares\\PermissionMiddleware' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Middlewares/PermissionMiddleware.php',
+        'Spatie\\Permission\\Middlewares\\RoleMiddleware' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Middlewares/RoleMiddleware.php',
+        'Spatie\\Permission\\Middlewares\\RoleOrPermissionMiddleware' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Middlewares/RoleOrPermissionMiddleware.php',
+        'Spatie\\Permission\\Models\\Permission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Models/Permission.php',
+        'Spatie\\Permission\\Models\\Role' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Models/Role.php',
+        'Spatie\\Permission\\PermissionRegistrar' => __DIR__ . '/..' . '/spatie/laravel-permission/src/PermissionRegistrar.php',
+        'Spatie\\Permission\\PermissionServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-permission/src/PermissionServiceProvider.php',
+        'Spatie\\Permission\\Traits\\HasPermissions' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Traits/HasPermissions.php',
+        'Spatie\\Permission\\Traits\\HasRoles' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Traits/HasRoles.php',
+        'Spatie\\Permission\\Traits\\RefreshesPermissionCache' => __DIR__ . '/..' . '/spatie/laravel-permission/src/Traits/RefreshesPermissionCache.php',
+        'Spatie\\Permission\\WildcardPermission' => __DIR__ . '/..' . '/spatie/laravel-permission/src/WildcardPermission.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
         'Symfony\\Component\\Console\\Application' => __DIR__ . '/..' . '/symfony/console/Application.php',
         'Symfony\\Component\\Console\\Attribute\\AsCommand' => __DIR__ . '/..' . '/symfony/console/Attribute/AsCommand.php',
@@ -5629,7 +5565,9 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
         'Termwind\\ValueObjects\\Style' => __DIR__ . '/..' . '/nunomaduro/termwind/src/ValueObjects/Style.php',
         'Termwind\\ValueObjects\\Styles' => __DIR__ . '/..' . '/nunomaduro/termwind/src/ValueObjects/Styles.php',
         'Tests\\CreatesApplication' => __DIR__ . '/../..' . '/tests/CreatesApplication.php',
+        'Tests\\Feature\\ExampleTest' => __DIR__ . '/../..' . '/tests/Feature/ExampleTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
+        'Tests\\Unit\\ExampleTest' => __DIR__ . '/../..' . '/tests/Unit/ExampleTest.php',
         'TheSeer\\Tokenizer\\Exception' => __DIR__ . '/..' . '/theseer/tokenizer/src/Exception.php',
         'TheSeer\\Tokenizer\\NamespaceUri' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUri.php',
         'TheSeer\\Tokenizer\\NamespaceUriException' => __DIR__ . '/..' . '/theseer/tokenizer/src/NamespaceUriException.php',
@@ -5673,10 +5611,10 @@ class ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInit41419d617ae5a7b360200ebbb2ce3f1d::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit13a34c0668d836240a505abd57870ddb::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit13a34c0668d836240a505abd57870ddb::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit13a34c0668d836240a505abd57870ddb::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit13a34c0668d836240a505abd57870ddb::$classMap;
 
         }, null, ClassLoader::class);
     }

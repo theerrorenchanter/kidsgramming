@@ -1,12 +1,15 @@
 import { useFormik } from 'formik'
 import * as Yup from 'yup'
 
+import { useDispatch } from 'react-redux'
+
 import { Navbar } from '../../navigation/views/Navbar'
 import { AuthLayout } from '../layout/AuthLayout'
 import { LoginForm } from '../views/LoginForm'
+import { startLogout, startUsernamePasswordLogin } from '../../store/auth/authThunks'
 
 const validations = Yup.object({
-  sponsor: Yup.string()
+  user_sponsor: Yup.string()
     .lowercase('The sponsor must be lowercase')
     .trim('The sponsor must be trimmed')
     .matches(/^[a-zA-Z0-9]+$/, 'The sponsor cannot contain white space and special character'),
@@ -20,15 +23,17 @@ const validations = Yup.object({
 })
 
 export const LoginPage = () => {
+  const dispatch = useDispatch()
+
   const authForm = useFormik({
     initialValues: {
-      sponsor: '',
+      user_sponsor: '',
       username: '',
       password: ''
     },
     validationSchema: validations,
     onSubmit: values => {
-
+      dispatch(startUsernamePasswordLogin(values))
     }
   })
   return (

@@ -1,7 +1,9 @@
 import { useFormik } from 'formik'
+import { useDispatch } from 'react-redux'
 import * as Yup from 'yup'
 
 import { Navbar } from '../../navigation/views/Navbar'
+import { startCreatingUserWithUsernamePassword, startLogout } from '../../store/auth/authThunks'
 import { AuthLayout } from '../layout/AuthLayout'
 import { RegisterForm } from '../views/RegisterForm'
 
@@ -9,8 +11,6 @@ const validations = Yup.object({
   name: Yup.string()
     .required('The name is required')
     .trim('The name must be trimmed'),
-  country: Yup.string()
-    .required('The country is required'),
   email: Yup.string()
     .required('The email is required')
     .email('Invalid email format')
@@ -25,17 +25,18 @@ const validations = Yup.object({
 })
 
 export const RegisterPage = () => {
+  const dispatch = useDispatch()
+
   const authForm = useFormik({
     initialValues: {
       name: '',
-      country: '',
       email: '',
       username: '',
       password: ''
     },
     validationSchema: validations,
     onSubmit: values => {
-
+      dispatch(startCreatingUserWithUsernamePassword(values))
     }
   })
   return (

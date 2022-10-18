@@ -10,9 +10,9 @@ export const loginUserWithUsernamePassword = async formData => {
     const result = await instance.post('auth/login', formData)
     const { data, status } = result
     const { auth_token: token, user } = data
-    const { username, sponsor, password } = formData
+    const { username, user_sponsor, password } = formData
 
-    storeAuthData(token, { username, sponsor, password })
+    storeAuthData(token, { username, user_sponsor, password })
 
     return {
       ok: status === 200,
@@ -39,9 +39,9 @@ export const registerUserWithUsernamePassword = async formData => {
     const result = await instance.post('auth/register', formData)
     const { data, status } = result
     const { auth_token: token, user } = data
-    const { username, sponsor, password } = formData
+    const { username, user_sponsor, password } = formData
 
-    storeAuthData(token, { username, sponsor, password })
+    storeAuthData(token, { username, user_sponsor, password })
 
     return {
       ok: status === 200,
