@@ -53,8 +53,8 @@ class RolesPermissionsSeeder extends Seeder
 
         // Student User
 
-        $student_free_user_role = Role::create(['name' => 'free_user-student']);
-        $student_premium_user_role = Role::create(['name' => 'premium_user-student']);
+        $student_free_user_role = Role::create(['name' => 'free-user-student']);
+        $student_premium_user_role = Role::create(['name' => 'premium-user-student']);
 
         $student_free_user_role->givePermissionTo($free_courses_permission);
         $student_premium_user_role->givePermissionTo($premium_courses_permission);
