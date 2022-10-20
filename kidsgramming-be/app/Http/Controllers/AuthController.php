@@ -23,6 +23,8 @@ class AuthController extends Controller
             'password' => Hash::make($request->password)
         ]);
 
+        $user->assignRole('free-user-owner');
+
         return response([
             'message' => 'User created',
             'user' => $user,
