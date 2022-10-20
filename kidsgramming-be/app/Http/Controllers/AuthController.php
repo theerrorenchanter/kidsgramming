@@ -28,6 +28,7 @@ class AuthController extends Controller
         return response([
             'message' => 'User created',
             'user' => $user,
+            'roles' => $user->roles,
             'auth_token' => $user->createToken('auth_token')->plainTextToken
         ]);
     }
@@ -49,6 +50,7 @@ class AuthController extends Controller
         return response([
             'message' => 'User logged',
             'user' => $user,
+            'roles' => $user->roles,
             'auth_token' => $user->createToken('auth_token')->plainTextToken
         ]);
     }
