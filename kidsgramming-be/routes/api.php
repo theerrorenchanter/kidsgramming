@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RegisterProfessorController;
+use App\Http\Controllers\RegisterStudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,6 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/auth/logout', [AuthController::class, 'logoutUser'])->name('users.logout');
+    Route::post('/students/register', [RegisterStudentController::class, 'registerStudent'])->name('students.register');
+    Route::post('/professors/register', [RegisterProfessorController::class, 'registerProfessor'])->name('students.register');
 });
 
 Route::controller(AuthController::class)->group(function () {
