@@ -12,14 +12,14 @@ class RolesPermissionsSeeder extends Seeder
 
     public function run()
     {
-        app()[PermissionRegister::class]->forgetCachedPermissions();
+        app()[PermissionRegistrar::class]->forgetCachedPermissions();
 
         /* Permissions */
 
         // Students and Owners
 
         $free_courses_permission = Permission::create(['name' => 'watch-free-courses']);
-        $premium_courses_permission = Permission::create(['name' => 'watch-premium-courses');
+        $premium_courses_permission = Permission::create(['name' => 'watch-premium-courses']);
 
         $create_free_subaccounts_permission = Permission::create(['name' => 'create-free-subaccounts']);
         $create_premium_subaccounts_permission = Permission::create(['name' => 'create-premium-subaccounts']);
@@ -28,7 +28,7 @@ class RolesPermissionsSeeder extends Seeder
 
         $create_courses_permission = Permission::create(['name' => 'create-courses']);
         $edit_courses_permission = Permission::create(['name' => 'edit-courses']);
-        $remove_courses_permission = Permission::create('name' => 'remove-courses-permission');
+        $remove_courses_permission = Permission::create(['name' => 'remove-courses-permission']);
 
         // Super Admins
 
@@ -53,8 +53,8 @@ class RolesPermissionsSeeder extends Seeder
 
         // Student User
 
-        $student_free_user_role = Role::create(['name' => 'free_user-student');
-        $student_premium_user_role = Role::create(['name' => 'premium_user-student');
+        $student_free_user_role = Role::create(['name' => 'free_user-student']);
+        $student_premium_user_role = Role::create(['name' => 'premium_user-student']);
 
         $student_free_user_role->givePermissionTo($free_courses_permission);
         $student_premium_user_role->givePermissionTo($premium_courses_permission);
@@ -62,7 +62,7 @@ class RolesPermissionsSeeder extends Seeder
 
         // Professor User
 
-        $professor_user_role = Role::create(['name'] => 'user-professor');
+        $professor_user_role = Role::create(['name' => 'user-professor']);
 
         $professor_user_role->givePermissionTo($create_courses_permission);
         $professor_user_role->givePermissionTo($edit_courses_permission);
