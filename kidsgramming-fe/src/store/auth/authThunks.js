@@ -41,7 +41,7 @@ export const startInitialAuthentication = () => {
 
       if (!result.ok) return dispatch(logout())
 
-      dispatch(login(result))
+      return dispatch(login(result))
     }
 
     dispatch(logout())

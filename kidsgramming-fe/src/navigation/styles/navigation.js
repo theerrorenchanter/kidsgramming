@@ -5,7 +5,6 @@ export const brandIconStyles = {
 
 export const brandStylesSm = {
   display: { xs: 'flex', md: 'none' },
-
   mr: 1
 }
 

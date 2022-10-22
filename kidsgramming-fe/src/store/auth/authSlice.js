@@ -9,7 +9,7 @@ export const authenticationStatuses = {
 const startingState = {
   status: authenticationStatuses.authenticating,
   name: null,
-  user_sponsor: null,
+  sponsor: null,
   username: null,
   roles: null,
   email: null,
@@ -18,11 +18,11 @@ const startingState = {
 }
 
 const loginReducer = (state, { payload }) => {
-  const { name, user_sponsor, username, roles, email, token, errorMessage } = payload
+  const { name, sponsor, username, roles, email, token, errorMessage } = payload
 
   state.status = authenticationStatuses.authenticated
   state.name = name
-  state.user_sponsor = user_sponsor
+  state.sponsor = sponsor
   state.username = username
   state.roles = roles
   state.email = email
@@ -33,7 +33,7 @@ const loginReducer = (state, { payload }) => {
 const logoutReducer = (state, { payload }) => {
   state.status = authenticationStatuses.notAuthenticated
   state.name = null
-  state.user_sponsor = null
+  state.sponsor = null
   state.username = null
   state.roles = null
   state.email = null
