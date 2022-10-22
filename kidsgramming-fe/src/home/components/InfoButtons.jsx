@@ -9,7 +9,7 @@ export const InfoButtons = () => {
         <Button variant='contained' size='large'>Pricing</Button>
         <Button variant='contained' size='large' sx={{ ml: 1 }}>About</Button>
         <Button variant='contained' size='large' sx={{ ml: 1 }} 
-           component={ RouterLink } to={'auth/courseoffering'}>Course Offering
+           component={ RouterLink } to={'course/courseoffering'}>Course Offering
         </Button>
 
       

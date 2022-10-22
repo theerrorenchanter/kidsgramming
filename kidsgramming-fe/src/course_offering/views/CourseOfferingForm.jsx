@@ -2,12 +2,12 @@ import {Grid, Card, CardMedia, CardContent, CardActions, Typography, Button}
  from '@mui/material'
 
  const images = [
-  '../../../public/auth/courses/sql.png',
-  '../../../public/auth/courses/java.jpg',
-  '../../../public/auth/courses/cplusplus.png',
-  '../../../public/auth/courses/robotica.jpeg',
-  '../../../public/auth/courses/net.jpeg',
-  '../../../public/auth/courses/python.png'
+  '../../../public/course_offering/img//sql.png',
+  '../../../public/course_offering/img//java.jpg',
+  '../../../public/course_offering/img//cplusplus.png',
+  '../../../public/course_offering/img//robotica.jpeg',
+  '../../../public/course_offering/img//net.jpeg',
+  '../../../public/course_offering/img//python.png'
  ]
 const posts = [
   {id: 1, title: 'SQL', content: 'Bienvenidos al curso para aprender SQL para manejo de datos en BD!', 
@@ -48,6 +48,7 @@ const content = posts.map((post) =>
                   <Button sx={{mx: 'auto'}} size="small" >
                     Aprender más
                   </Button>
+                  
               </CardActions>
             </Card>
       </Grid>

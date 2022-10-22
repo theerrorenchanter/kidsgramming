@@ -23,7 +23,7 @@ const subtitleStyles = {
   textAlign: 'center'
 }
 
-export const AuthCourseLayout = ({ title, children }) => {
+export const CourseFormLayout = ({ title, children }) => {
   return (
     <Box sx={{ p: 2}}>
       <Paper elevation={4} sx={paperContainerStyles}>
@@ -38,7 +38,7 @@ export const AuthCourseLayout = ({ title, children }) => {
   )
 }
 
-AuthCourseLayout.propTypes = {
+CourseFormLayout.propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.element),
