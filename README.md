@@ -7,6 +7,7 @@ Requirements:
 - NodeJS
 - NPM
 - Yarn (First you need npm installed before activating yarn)
+   If you dont want to run `npm run dev`
 
 Steps:
 
