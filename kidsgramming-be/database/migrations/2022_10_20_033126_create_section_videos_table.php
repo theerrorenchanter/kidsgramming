@@ -21,13 +21,13 @@ return new class extends Migration
             $table->boolean('available')->default(false)->required();
             $table->boolean('premium')->default(false)->required();
             $table->string('cover_image')->nullable();
-            $table->string('user_professor')->required();
+            $table->foreignId('user_professor')->required();
             $table->string('video_url')->nullable();
             $table->timestamps();
         });
 
         Schema::table('section_videos', function (Blueprint $table) {
-            $table->foreign('sv_user_professor')
+            $table->foreign('user_professor')
                 ->references('id')
                 ->on('users')
                 ->onUpdate('cascade')

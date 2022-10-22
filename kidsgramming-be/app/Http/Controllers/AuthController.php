@@ -19,7 +19,7 @@ class AuthController extends Controller
             'name' => $request->name,
             'username' => $request->username,
             'email' => $request->email,
-            'user_sponsor' => $request->user_sponsor,
+            'sponsor' => $request->sponsor,
             'password' => Hash::make($request->password)
         ]);
 
@@ -35,7 +35,7 @@ class AuthController extends Controller
 
     public function loginUser(LoginUserRequest $request)
     {
-        if (Auth::attempt($request->only('user_sponsor', 'username', 'password')))
+        if (Auth::attempt($request->only('sponsor', 'username', 'password')))
         {
             return response([
                 'message' => 'Invalid credentials'
@@ -43,7 +43,7 @@ class AuthController extends Controller
         }
 
         $user = User::where([
-            ['user_sponsor', '=', $request->sponsor],
+            ['sponsor', '=', $request->sponsor],
             ['username', '=', $request->username],
         ])->first();
 

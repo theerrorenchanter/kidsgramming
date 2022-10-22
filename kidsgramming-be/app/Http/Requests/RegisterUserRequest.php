@@ -18,7 +18,7 @@ class RegisterUserRequest extends FormRequest
             'name' => ['required'],
             'username' => ['required'],
             'email' => ['nullable', 'email', 'unique:users,email'],
-            'user_sponsor' => ['nullable', 'exists:users,username'],
+            'sponsor' => ['nullable', 'exists:users,username'],
             'password' => ['required']
         ];
     }

@@ -21,12 +21,12 @@ return new class extends Migration
             $table->boolean('available')->default(false)->required();
             $table->boolean('premium')->default(false)->required();
             $table->string('cover_image')->nullable();
-            $table->string('user_professor')->required();
+            $table->foreignId('user_professor')->required();
             $table->timestamps();
         });
 
         Schema::table('course_sections', function (Blueprint $table) {
-            $table->foreign('cs_user_professor')
+            $table->foreign('user_professor')
                 ->references('id')
                 ->on('users')
                 ->onUpdate('cascade')

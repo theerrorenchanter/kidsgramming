@@ -16,7 +16,7 @@ class LoginUserRequest extends FormRequest
     {
         return [
             'username' => ['required'],
-            'user_sponsor' => ['nullable', 'exists:users,user_sponsor'],
+            'sponsor' => ['nullable', 'exists:users,sponsor'],
             'password' => ['required']
         ];
     }

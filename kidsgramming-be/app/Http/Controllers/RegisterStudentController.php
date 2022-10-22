@@ -22,7 +22,7 @@ class RegisterStudentController extends Controller
         $user = User::create([
             'name' => $request->name,
             'username' => $request->username,
-            'user_sponsor' => $request->user->username,
+            'sponsor' => $request->user->username,
             'password' => Hash::make($request->password)
         ]);
 
