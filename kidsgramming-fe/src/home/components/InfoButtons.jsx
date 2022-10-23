@@ -1,5 +1,6 @@
 import Button from '@mui/material/Button'
 import Box from '@mui/material/Box'
+import { Link as RouterLink } from 'react-router-dom'
 
 export const InfoButtons = () => {
   return (
@@ -7,6 +8,11 @@ export const InfoButtons = () => {
         <Button variant='contained' size='large' sx={{ mr: 1 }}>Contact</Button>
         <Button variant='contained' size='large'>Pricing</Button>
         <Button variant='contained' size='large' sx={{ ml: 1 }}>About</Button>
+        <Button variant='contained' size='large' sx={{ ml: 1 }} 
+           component={ RouterLink } to={'course/courseoffering'}>Course Offering
+        </Button>
+
+      
     </Box>
   )
 }

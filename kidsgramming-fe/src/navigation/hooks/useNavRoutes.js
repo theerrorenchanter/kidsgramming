@@ -18,6 +18,10 @@ const notAuthenticatedRoutes = {
   pricing: {
     description: 'Pricing',
     to: '/pricing'
+  },
+  courseoffering: {
+    description: 'Course Offering',
+    to: '/auth/courseoffering'
   }
 }
 
