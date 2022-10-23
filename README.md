@@ -6,13 +6,14 @@ Requirements:
 
 - NodeJS
 - NPM
-- Yarn (First you need npm installed before activating yarn)
-- If you dont want to activate Yarn just run `npm run dev`
+- Optional: Yarn (First you need npm installed before activating yarn)
+
 
 Steps:
 
 1. To install projects dependencies run `yarn install` inside kidsgramming-fe folder
 2. Then you must run the project using `yarn dev`
+- If you dont have Yarn activated just run `npm run dev`
 
 - Ensure you are running the project on http://localhost:5173
 
