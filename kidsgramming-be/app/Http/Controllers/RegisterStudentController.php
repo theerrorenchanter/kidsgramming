@@ -4,12 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\RegisterUserRequest;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 class RegisterStudentController extends Controller
 {
-    public function registerProfessor(RegisterUserRequest $request)
+    public function registerStudent(RegisterUserRequest $request)
     {
 
         if (!$request->user->hasAnyRole(['free-user-owner', 'premium-user-owner']))

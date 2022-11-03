@@ -6,6 +6,7 @@ use App\Http\Controllers\CourseSectionController;
 use App\Http\Controllers\CourseSectionVideoController;
 use App\Http\Controllers\RegisterProfessorController;
 use App\Http\Controllers\RegisterStudentController;
+use App\Http\Controllers\SuscriptionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,10 +27,14 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::post('/courses/section/video', [CourseSectionVideoController::class, 'createCourseSectionVideo'])->name('course.section.video.create');
     Route::post('/students/register', [RegisterStudentController::class, 'registerStudent'])->name('students.register');
     Route::post('/professors/register', [RegisterProfessorController::class, 'registerProfessor'])->name('students.register');
+    Route::post('/suscriptions/update', [SuscriptionController::class, 'changeSuscription'])->name('suscriptions.changeSuscription');
 });
 
 Route::controller(AuthController::class)->group(function () {
     Route::post('/auth/register', 'registerUser')->name('users.register');
     Route::post('/auth/login', 'loginUser')->name('users.login');
-    Route::get('/courses', [CourseController::class, 'listPaginated'])->name('courses.listPaginated');
+
 });
+
+Route::get('/courses', [CourseController::class, 'listPaginated'])->name('courses.listPaginated');
+Route::get('/suscriptions', [SuscriptionController::class, 'index'])->name('suscriptions.index');

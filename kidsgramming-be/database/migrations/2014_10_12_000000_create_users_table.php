@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('email')->nullable()->unique();
             $table->string('sponsor')->nullable();
+            $table->foreignId('user_suscription')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
@@ -29,6 +30,12 @@ return new class extends Migration
             $table->foreign('sponsor')
                 ->references('username')
                 ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('user_suscription')
+                ->references('id')
+                ->on('suscriptions')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });

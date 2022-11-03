@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Http\Requests\LoginUserRequest;
 use App\Http\Requests\RegisterUserRequest;
+use App\Models\Suscription;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
@@ -20,6 +21,7 @@ class AuthController extends Controller
             'username' => $request->username,
             'email' => $request->email,
             'sponsor' => $request->sponsor,
+            'user_suscription' => Suscription::where('name', 'free'),
             'password' => Hash::make($request->password)
         ]);
 
