@@ -33,6 +33,8 @@ export const LoginPage = () => {
     },
     validationSchema: validations,
     onSubmit: values => {
+      const { sponsor } = values
+      sponsor === '' ? values.sponsor = null : values.sponsor = sponsor
       dispatch(startUsernamePasswordLogin(values))
     }
   })

@@ -13,19 +13,22 @@ const startingState = {
   username: null,
   roles: null,
   email: null,
+  suscription: null,
   token: null,
   errorMessage: null
 }
 
 const loginReducer = (state, { payload }) => {
-  const { name, sponsor, username, roles, email, token, errorMessage } = payload
+  const { user, roles, token, errorMessage } = payload
+  const { name, sponsor, username, email, user_suscription: suscription } = user
 
   state.status = authenticationStatuses.authenticated
   state.name = name
   state.sponsor = sponsor
   state.username = username
-  state.roles = roles
+  state.roles = roles.map(role => role.name)
   state.email = email
+  state.suscription = suscription
   state.token = token
   state.errorMessage = errorMessage
 }
@@ -41,6 +44,12 @@ const logoutReducer = (state, { payload }) => {
   state.errorMessage = payload?.errorMessage
 }
 
+const updateSuscriptionReducer = (state, { payload }) => {
+  state.suscription = payload.suscription
+  state.roles = payload.roles.map(role => role.name)
+  state.errorMessage = payload?.errorMessage
+}
+
 const authenticatingReducer = state => {
   state.status = authenticationStatuses.authenticating
 }
@@ -51,8 +60,9 @@ export const authSlice = createSlice({
   reducers: {
     login: loginReducer,
     logout: logoutReducer,
-    authenticating: authenticatingReducer
+    authenticating: authenticatingReducer,
+    updateSuscription: updateSuscriptionReducer
   }
 })
 
-export const { login, logout, authenticating } = authSlice.actions
+export const { login, logout, authenticating, updateSuscription } = authSlice.actions

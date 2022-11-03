@@ -9,7 +9,7 @@ export const loginUserWithUsernamePassword = async formData => {
   try {
     const result = await instance.post('auth/login', formData)
     const { data, status } = result
-    const { auth_token: token, user } = data
+    const { auth_token: token, user, roles } = data
     const { username, sponsor, password } = formData
 
     storeAuthData(token, { username, sponsor, password })
@@ -18,6 +18,7 @@ export const loginUserWithUsernamePassword = async formData => {
       ok: status === 200,
       token,
       user,
+      roles,
       errorMessage: null
     }
   } catch (error) {
@@ -29,6 +30,7 @@ export const loginUserWithUsernamePassword = async formData => {
       ok: status === 200,
       token: null,
       user: null,
+      roles: null,
       errorMessage
     }
   }

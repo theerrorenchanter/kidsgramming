@@ -1,5 +1,5 @@
-import { loginUserWithUsernamePassword, logoutUser, registerUserWithUsernamePassword, initialAthentication } from '../../api/auth/authAPI'
-import { authenticating, login, logout } from './authSlice'
+import { loginUserWithUsernamePassword, logoutUser, registerUserWithUsernamePassword, initialAthentication, changeSuscription } from '../../api/auth/authAPI'
+import { authenticating, login, logout, updateSuscription } from './authSlice'
 
 export const startUsernamePasswordLogin = data => {
   return async dispatch => {
@@ -45,5 +45,12 @@ export const startInitialAuthentication = () => {
     }
 
     dispatch(logout())
+  }
+}
+
+export const startUpdatingSuscription = data => {
+  return async dispatch => {
+    const result = changeSuscription(data)
+    return dispatch(updateSuscription(result))
   }
 }

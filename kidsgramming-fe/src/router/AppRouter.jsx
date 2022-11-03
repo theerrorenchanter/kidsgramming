@@ -2,8 +2,9 @@ import { useSelector } from 'react-redux'
 import { Route, Routes, Navigate } from 'react-router-dom'
 import { AuthRoutes } from '../auth/routes/AuthRoutes'
 import { CourseRoutes } from '../courses/routes/CourseRoutes'
+import { AHomeRoutes } from '../home/routes/AHomeRoutes'
 
-import { HomeRoutes } from '../home/routes/HomeRoutes'
+import { UAHomeRoutes } from '../home/routes/UAHomeRoutes'
 import { authenticationStatuses } from '../store/auth/authSlice'
 import { CheckingAuth } from '../ui/views/CheckingAuth'
 
@@ -16,10 +17,10 @@ export const AppRouter = () => {
     <Routes>
         {(status === authenticationStatuses.authenticated)
           ? (<>
-
+              <Route path='/' element={<AHomeRoutes />} />
             </>)
           : (<>
-              <Route path='/' element={<HomeRoutes />} />
+              <Route path='/' element={<UAHomeRoutes />} />
               <Route path='auth/*' element={<AuthRoutes />} />
             </>)}
 
