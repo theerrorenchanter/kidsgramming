@@ -35,17 +35,15 @@ class AuthController extends Controller
 
     public function loginUser(LoginUserRequest $request)
     {
-        if (Auth::attempt($request->only('sponsor', 'username', 'password')))
+        if (!Auth::attempt($request->only('sponsor', 'username', 'password')))
         {
             return response([
                 'message' => 'Invalid credentials'
             ], 401);
         }
 
-        $user = User::where([
-            ['sponsor', '=', $request->sponsor],
-            ['username', '=', $request->username],
-        ])->first();
+        $user = User::where('sponsor', $request->sponsor)
+                    ->where('username', $request->username)->first();
 
         return response([
             'message' => 'User logged',
