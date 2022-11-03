@@ -25,7 +25,7 @@ const subtitleStyles = {
 
 export const CourseFormLayout = ({ title, children }) => {
   return (
-    <Box sx={{ p: 2}}>
+    <Box sx={{ p: 2 }}>
       <Paper elevation={4} sx={paperContainerStyles}>
         <Box>
           <Typography variant="h4" sx={subtitleStyles} >
@@ -40,8 +40,5 @@ export const CourseFormLayout = ({ title, children }) => {
 
 CourseFormLayout.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.element),
-    PropTypes.element
-  ])
+  children: PropTypes.element
 }

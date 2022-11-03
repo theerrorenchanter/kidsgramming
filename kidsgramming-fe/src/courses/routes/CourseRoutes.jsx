@@ -1,6 +1,5 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-
-import {CourseOfferingPage } from '../../course_offering/pages/CourseOfferingPage'
+import { CourseOfferingPage } from '../pages/CourseOfferingPage'
 
 export const CourseRoutes = () => {
   return (

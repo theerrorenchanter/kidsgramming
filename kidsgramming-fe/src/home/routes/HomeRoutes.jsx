@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { AuthRoutes } from '../../auth/routes/AuthRoutes'
-import { CourseRoutes } from '../../course_offering/routes/CourseRoutes'
+import { CourseRoutes } from '../../courses/routes/CourseRoutes'
 import { HomePage } from '../pages/HomePage'
 
 export const HomeRoutes = () => {

@@ -17,4 +17,9 @@ class CourseController extends Controller
             'course' => $course
         ]);
     }
+
+    public function listPaginated(Request $request)
+    {
+        return Course::latest()->paginate(8);
+    }
 }
