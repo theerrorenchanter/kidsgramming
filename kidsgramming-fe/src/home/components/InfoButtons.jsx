@@ -8,11 +8,9 @@ export const InfoButtons = () => {
         <Button variant='contained' size='large' sx={{ mr: 1 }}>Contact</Button>
         <Button variant='contained' size='large'>Pricing</Button>
         <Button variant='contained' size='large' sx={{ ml: 1 }}>About</Button>
-        <Button variant='contained' size='large' sx={{ ml: 1 }} 
-           component={ RouterLink } to={'course/courseoffering'}>Course Offering
+        <Button variant='contained' size='large' sx={{ ml: 1 }}
+           component={ RouterLink } to={'courses/offering'}>Course Offering
         </Button>
-
-      
     </Box>
   )
 }

@@ -1,5 +1,7 @@
 import { useSelector } from 'react-redux'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, Navigate } from 'react-router-dom'
+import { AuthRoutes } from '../auth/routes/AuthRoutes'
+import { CourseRoutes } from '../courses/routes/CourseRoutes'
 
 import { HomeRoutes } from '../home/routes/HomeRoutes'
 import { authenticationStatuses } from '../store/auth/authSlice'
@@ -13,9 +15,17 @@ export const AppRouter = () => {
   return (
     <Routes>
         {(status === authenticationStatuses.authenticated)
-          ? ''
-          : <Route path='/*' element={<HomeRoutes />} />}
+          ? (<>
 
+            </>)
+          : (<>
+              <Route path='/' element={<HomeRoutes />} />
+              <Route path='auth/*' element={<AuthRoutes />} />
+            </>)}
+
+          <Route path='courses/*' element={<CourseRoutes />} />
+
+          <Route path='/*' element={<Navigate to='/' />} />
     </Routes>
 
   )
