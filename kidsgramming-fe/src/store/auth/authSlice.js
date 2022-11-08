@@ -26,7 +26,7 @@ const loginReducer = (state, { payload }) => {
   state.name = name
   state.sponsor = sponsor
   state.username = username
-  state.roles = roles.map(role => role.name)
+  state.roles = roles.map((role) => role.name)
   state.email = email
   state.suscription = suscription
   state.token = token
@@ -40,6 +40,7 @@ const logoutReducer = (state, { payload }) => {
   state.username = null
   state.roles = null
   state.email = null
+  state.suscription = null
   state.token = null
   state.errorMessage = payload?.errorMessage
 }
@@ -50,7 +51,7 @@ const updateSuscriptionReducer = (state, { payload }) => {
   state.errorMessage = payload?.errorMessage
 }
 
-const authenticatingReducer = state => {
+const authenticatingReducer = (state) => {
   state.status = authenticationStatuses.authenticating
 }
 
@@ -65,4 +66,9 @@ export const authSlice = createSlice({
   }
 })
 
-export const { login, logout, authenticating, updateSuscription } = authSlice.actions
+export const {
+  login,
+  logout,
+  authenticating,
+  updateSuscription
+} = authSlice.actions

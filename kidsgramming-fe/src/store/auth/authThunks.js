@@ -1,4 +1,5 @@
-import { loginUserWithUsernamePassword, logoutUser, registerUserWithUsernamePassword, initialAthentication, changeSuscription } from '../../api/auth/authAPI'
+import { loginUserWithUsernamePassword, logoutUser, registerUserWithUsernamePassword, initialAthentication } from '../../api/auth/authAPI'
+import { changeSuscription } from '../../api/suscription/suscriptionAPI'
 import { authenticating, login, logout, updateSuscription } from './authSlice'
 
 export const startUsernamePasswordLogin = data => {

@@ -25,3 +25,22 @@ export const changeSuscription = async suscriptionId => {
     }
   }
 }
+
+export const getSuscriptionsList = async () => {
+  try {
+    const { data } = await instance.get('suscriptions')
+
+    return {
+      data,
+      errorMessage: null
+    }
+  } catch (error) {
+    const { response } = error
+    const errorMessage = response.data ? response.data.message : error.message
+
+    return {
+      data: [],
+      errorMessage
+    }
+  }
+}

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('email')->nullable()->unique();
             $table->string('sponsor')->nullable();
             $table->foreignId('user_suscription')->nullable();
+            $table->bigInteger('created_accounts')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

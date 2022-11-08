@@ -6,11 +6,11 @@ import { AHomeRoutes } from '../home/routes/AHomeRoutes'
 
 import { UAHomeRoutes } from '../home/routes/UAHomeRoutes'
 import { authenticationStatuses } from '../store/auth/authSlice'
+import { SuscriptionesRoutes } from '../suscriptions/routes/SuscriptionesRoutes'
 import { CheckingAuth } from '../ui/views/CheckingAuth'
 
 export const AppRouter = () => {
   const { status } = useSelector(state => state.auth)
-
   if (status === authenticationStatuses.authenticating) return <CheckingAuth />
 
   return (
@@ -25,6 +25,7 @@ export const AppRouter = () => {
             </>)}
 
           <Route path='courses/*' element={<CourseRoutes />} />
+          <Route path='suscriptions/*' element={<SuscriptionesRoutes />}/>
 
           <Route path='/*' element={<Navigate to='/' />} />
     </Routes>

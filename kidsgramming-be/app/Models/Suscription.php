@@ -13,4 +13,8 @@ class Suscription extends Model
         'name',
         'price'
     ];
+
+    protected $casts = [
+        'benefits' => 'array'
+    ];
 }

@@ -8,14 +8,12 @@ const buttonStyles = [{ key: 'fontSize', value: '10pt' }, { key: 'height', value
 export const NotAuthenticatedMenu = () => {
   const location = useLocation()
   const { pathname } = location
-  const inAuthPage = pathname.includes('auth')
-  const inCoursesPage = pathname.includes('courses')
 
   return (
     <>
       <LogoNavbar />
-      <SpecialButton component={ RouterLink } to={inAuthPage || inCoursesPage ? '/' : 'auth/register'} extraStyles={buttonStyles}>
-          {inAuthPage || inCoursesPage ? 'Back Home' : 'Join us!'}
+      <SpecialButton component={ RouterLink } to={pathname === '/' ? '/auth/register' : '/'} extraStyles={buttonStyles}>
+          {pathname === '/' ? 'Join us!' : 'Back Home'}
       </SpecialButton>
     </>
   )
