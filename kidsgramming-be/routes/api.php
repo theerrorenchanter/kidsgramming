@@ -33,7 +33,6 @@ Route::middleware('auth:sanctum')->group(function () {
 Route::controller(AuthController::class)->group(function () {
     Route::post('/auth/register', 'registerUser')->name('users.register');
     Route::post('/auth/login', 'loginUser')->name('users.login');
-
 });
 
 Route::get('/courses', [CourseController::class, 'listPaginated'])->name('courses.listPaginated');

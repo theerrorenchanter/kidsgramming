@@ -24,7 +24,8 @@ export const AppRouter = () => {
           : (<>
               <Route path='/' element={<UAHomeRoutes />} />
               <Route path='auth/*' element={<AuthRoutes />} />
-            </>)}
+            </>)
+        }
 
           <Route path='admin/*' element={<AdminRoutes />} />
           <Route path='student/*' element={<StudentRoutes />} />
