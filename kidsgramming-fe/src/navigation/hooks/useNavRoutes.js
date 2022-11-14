@@ -21,7 +21,15 @@ const notAuthenticatedRoutes = {
   },
   courseoffering: {
     description: 'Course Offering',
-    to: '/auth/courseoffering'
+    to: '/course/courseoffering'
+  },
+  admin: {
+    description: 'Admin',
+    to: '/admin/home'
+  },
+  student: {
+    description: 'Student',
+    to: '/student/home'
   }
 }
 

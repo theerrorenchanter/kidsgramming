@@ -12,6 +12,12 @@ export const InfoButtons = () => {
         <Button variant='contained' size='large' sx={{ ml: 1 }}
            component={ RouterLink } to={'courses/offering'}>Course Offering
         </Button>
+        <Button variant='contained' size='large' sx={{ ml: 1 }}
+           component={ RouterLink } to={'admin/home'}>Admin
+        </Button>
+        <Button variant='contained' size='large' sx={{ ml: 1 }}
+           component={ RouterLink } to={'student/home'}>Estudiante
+        </Button>
     </Box>
   )
 }
