@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->string('email')->nullable()->unique();
             $table->string('sponsor')->nullable();
-            $table->foreignId('user_suscription')->nullable();
+            $table->string('suscription')->nullable();
             $table->bigInteger('created_accounts')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -34,8 +34,8 @@ return new class extends Migration
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
 
-            $table->foreign('user_suscription')
-                ->references('id')
+            $table->foreign('suscription')
+                ->references('name')
                 ->on('suscriptions')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');

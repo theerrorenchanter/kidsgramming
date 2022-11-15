@@ -19,13 +19,12 @@ export const CourseOfferingPage = () => {
       <Navbar />
       <CourseLayout>
         <CourseFormLayout title='Course Offering'>
-          <>
-            {Boolean(data.length) && !loading && <CourseOfferingForm courses={data}></CourseOfferingForm>}
+            {Boolean(data.length) && !loading && <CourseOfferingForm courses={data} />}
             {!errorMessage && !data.length && !loading && <NothingToShow reason='No data to show' />}
             {errorMessage && !loading && <NothingToShow reason={ errorMessage } />}
             {loading && <Waiting />}
-            <PaginationButtons currentPage={currentPage} setCurrentPage={setCurrentPage} maxPages={maxPages} />
-          </>
+            {Boolean(data.length) && !loading && <PaginationButtons
+              currentPage={currentPage} setCurrentPage={setCurrentPage} maxPages={maxPages} />}
         </CourseFormLayout>
       </CourseLayout>
     </>

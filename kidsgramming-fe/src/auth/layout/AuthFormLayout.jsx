@@ -5,7 +5,7 @@ import { Image } from 'mui-image'
 import PropTypes from 'prop-types'
 
 const paperContainerStyles = {
-  display: 'inline-flex',
+  display: 'flex',
   justifyContent: 'space-evenly',
   alignItems: 'center',
   p: 3
@@ -35,7 +35,7 @@ export const AuthFormLayout = ({ title, imageSource, children }) => {
             {children}
         </Box>
         <Box sx={imageBoxContainer}>
-          <Image src={imageSource} shift='left' duration={500} />
+          <Image src={imageSource} shift='left' height='500px' width='500px' duration={500} />
         </Box>
       </Paper>
     </Box>

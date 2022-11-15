@@ -61,10 +61,11 @@ export const linksBoxStyles = {
 }
 
 export const linkStyles = {
-  my: 2,
+  m: 0.5,
   color: 'inherit',
   '&:hover': {
     backgroundColor: 'secondary.main',
     color: 'primary.main'
   }
+
 }

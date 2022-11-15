@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import * as Yup from 'yup'
 
 import { Navbar } from '../../navigation/views/Navbar'
-import { startCreatingUserWithUsernamePassword, startLogout } from '../../store/auth/authThunks'
+import { startCreatingUserWithUsernamePassword } from '../../store/auth/authThunks'
 import { AuthLayout } from '../layout/AuthLayout'
 import { RegisterForm } from '../views/RegisterForm'
 

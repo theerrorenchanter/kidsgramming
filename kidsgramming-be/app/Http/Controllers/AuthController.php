@@ -20,8 +20,8 @@ class AuthController extends Controller
             'name' => $request->name,
             'username' => $request->username,
             'email' => $request->email,
-            'sponsor' => $request->sponsor,
-            'user_suscription' => Suscription::where('name', 'free'),
+            'suscription' => Suscription::where('name', 'free'),
+            'created_accounts' => 0,
             'password' => Hash::make($request->password)
         ]);
 
@@ -30,7 +30,7 @@ class AuthController extends Controller
         return response([
             'message' => 'User created',
             'user' => $user,
-            'roles' => $user->roles,
+            'roles' => $user->getRoleNames(),
             'auth_token' => $user->createToken('auth_token')->plainTextToken
         ]);
     }
@@ -50,14 +50,14 @@ class AuthController extends Controller
         return response([
             'message' => 'User logged',
             'user' => $user,
-            'roles' => $user->roles,
+            'roles' => $user->getRoleNames(),
             'auth_token' => $user->createToken('auth_token')->plainTextToken
         ]);
     }
 
     public function logoutUser(Request $request)
     {
-        $request->user()->currentAccesToken()->delete();
+        $request->user()->currentAccessToken()->delete();
 
         return response([
             'message' => 'Logged out'

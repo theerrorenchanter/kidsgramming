@@ -8,13 +8,13 @@ import { useNavbar } from '../hooks/useNavbar'
 import { ToggleLinks } from './links/ToggleLinks'
 
 const routes = {
-  login: {
-    description: 'Login',
-    to: '/auth/login'
+  profile: {
+    description: 'Profile',
+    to: '/'
   },
-  register: {
-    description: 'Register',
-    to: '/auth/register'
+  settings: {
+    description: 'Settings',
+    to: '/'
   }
 }
 

@@ -7,7 +7,6 @@ export const AHomePage = () => {
     <>
       <Navbar />
       <HomeLayout>
-
       </HomeLayout>
     </>
   )

@@ -8,7 +8,7 @@ import { linkStyles } from '../../styles/navigation'
 export const NavbarLink = ({ route }) => {
   const { to, description } = route
   return (
-    <Button component={ RouterLink } sx={ linkStyles } to={ to }>
+    <Button variant="outlined" size='small' color='secondary' component={ RouterLink } sx={ linkStyles } to={ to }>
       <Typography sx={{ fontWeight: 500 }} align='center'>{description}</Typography>
     </Button>
   )

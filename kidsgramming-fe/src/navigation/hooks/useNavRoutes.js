@@ -2,58 +2,52 @@ import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { authenticationStatuses } from '../../store/auth/authSlice'
 
-const notAuthenticatedRoutes = {
-  home: {
-    description: 'Home',
+const adminRoutes = {
+  professors: {
+    description: 'Professors',
     to: '/'
-  },
-  login: {
-    description: 'Login',
-    to: '/auth/login'
-  },
-  register: {
-    description: 'Register',
-    to: '/auth/register'
-  },
-  pricing: {
-    description: 'Pricing',
-    to: '/pricing'
-  },
-  courseoffering: {
-    description: 'Course Offering',
-    to: '/course/courseoffering'
-  },
-  admin: {
-    description: 'Admin',
-    to: '/admin/home'
-  },
-  student: {
-    description: 'Student',
-    to: '/student/home'
   }
 }
 
-const authenticatedRoutes = [
+const freeSponsorRoutes = {
+  students: {
+    description: 'Students',
+    to: '/'
+  }
+}
+const premiumSponsorRoutes = {
+  students: {
+    description: 'Students',
+    to: '/'
+  }
+}
 
-]
+const studentRoutes = {}
+const professorRoutes = {}
+
+const roleRoutes = {
+  'super-admin': adminRoutes,
+  'free-user-owner': freeSponsorRoutes,
+  'premium-user-owner': premiumSponsorRoutes
+}
 
 const initialState = {
   authenticated: false,
-  routes: notAuthenticatedRoutes
+  routes: {}
 }
 
 export const useNavRoutes = (init = initialState) => {
   const [authenticated, setAuthenticated] = useState(init.authenticated)
   const [routes, setRoutes] = useState(init.routes)
-  const { status } = useSelector(state => state.auth)
+  const { status, roles } = useSelector(state => state.auth)
 
   useEffect(() => {
     setAuthenticated(status === authenticationStatuses.authenticated)
-    authenticated ? setRoutes(authenticatedRoutes) : setRoutes(notAuthenticatedRoutes)
+    status === authenticationStatuses.authenticated ? setRoutes(roleRoutes[roles]) : setRoutes({})
   }, [status])
 
   return {
     routes,
-    setAuthenticated
+    authenticated
   }
 }

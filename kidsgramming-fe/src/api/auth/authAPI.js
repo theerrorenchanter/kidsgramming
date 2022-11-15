@@ -1,6 +1,6 @@
 import { instance } from '../instance'
 
-const storeAuthData = (token, authData) => {
+export const storeAuthData = (token, authData) => {
   instance.defaults.headers.common.Authorization = `Bearer ${token}`
   localStorage.authData = JSON.stringify(authData)
 }
@@ -40,7 +40,7 @@ export const registerUserWithUsernamePassword = async formData => {
   try {
     const result = await instance.post('auth/register', formData)
     const { data, status } = result
-    const { auth_token: token, user } = data
+    const { auth_token: token, user, roles } = data
     const { username, sponsor, password } = formData
 
     storeAuthData(token, { username, sponsor, password })
@@ -49,6 +49,7 @@ export const registerUserWithUsernamePassword = async formData => {
       ok: status === 200,
       token,
       user,
+      roles,
       errorMessage: null
     }
   } catch (error) {
@@ -60,6 +61,7 @@ export const registerUserWithUsernamePassword = async formData => {
       ok: status === 200,
       token: null,
       user: null,
+      roles: null,
       errorMessage
     }
   }
@@ -85,7 +87,9 @@ export const initialAthentication = async () => {
 export const logoutUser = async () => {
   try {
     const result = await instance.get('auth/logout')
-    const { data, status } = result
+    const { status, data } = result
+
+    if (localStorage.authData) localStorage.removeItem('authData')
 
     return {
       ok: status === 200,

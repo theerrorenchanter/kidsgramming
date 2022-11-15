@@ -1,10 +1,10 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { ProfessorsPage } from '../pages/ProfessorsPage'
+import { StudentsPage } from '../pages/StudentsPage'
 
-export const AdminRoutes = () => {
+export const SponsorRoutes = () => {
   return (
     <Routes>
-      <Route path='/' element={<ProfessorsPage />}/>
+      <Route path='/' element={<StudentsPage />}/>
 
       <Route path='/*' element={<Navigate to='/' />}/>
     </Routes>

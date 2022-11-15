@@ -26,7 +26,7 @@ const loginReducer = (state, { payload }) => {
   state.name = name
   state.sponsor = sponsor
   state.username = username
-  state.roles = roles.map((role) => role.name)
+  state.roles = roles[0]
   state.email = email
   state.suscription = suscription
   state.token = token
@@ -47,7 +47,7 @@ const logoutReducer = (state, { payload }) => {
 
 const updateSuscriptionReducer = (state, { payload }) => {
   state.suscription = payload.suscription
-  state.roles = payload.roles.map(role => role.name)
+  state.roles = payload.roles.map(role => role.name)[0]
   state.errorMessage = payload?.errorMessage
 }
 

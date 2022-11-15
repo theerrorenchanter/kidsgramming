@@ -4,9 +4,10 @@ import Box from '@mui/material/Box'
 import PropTypes from 'prop-types'
 
 const paperContainerStyles = {
-  display: 'inline-flex',
-  justifyContent: 'space-evenly',
-  alignItems: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  width: '100%',
+  height: '600pt',
   p: 3
 }
 
@@ -19,18 +20,23 @@ const subtitleStyles = {
   fontSize: 35,
   letterSpacing: 2,
   fontWeight: 700,
-  color: 'primary.main',
   textAlign: 'center'
+}
+
+const boxContainerStyles = {
+  p: 2,
+  width: '100%',
+  height: '100%'
 }
 
 export const CourseFormLayout = ({ title, children }) => {
   return (
-    <Box sx={{ p: 2 }}>
+    <Box sx={boxContainerStyles}>
       <Paper elevation={4} sx={paperContainerStyles}>
+        <Typography variant="h4" sx={subtitleStyles} >
+                { title }
+        </Typography>
         <Box>
-          <Typography variant="h4" sx={subtitleStyles} >
-              { title }
-          </Typography>
           {children}
         </Box>
       </Paper>
@@ -40,5 +46,5 @@ export const CourseFormLayout = ({ title, children }) => {
 
 CourseFormLayout.propTypes = {
   title: PropTypes.string.isRequired,
-  children: PropTypes.element
+  children: PropTypes.oneOfType([PropTypes.array, PropTypes.element])
 }

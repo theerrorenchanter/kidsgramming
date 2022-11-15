@@ -12,7 +12,7 @@ class RegisterProfessorController extends Controller
     public function registerProfessor(RegisterUserRequest $request)
     {
 
-        if (!$request->user->hasRole('super-admin'))
+        if (!$request->user()->hasRole('super-admin'))
         {
             return response([
                 'message' => 'Authorization required'

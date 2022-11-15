@@ -13,23 +13,29 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('section_videos', function (Blueprint $table) {
+        Schema::create('course_sections', function (Blueprint $table) {
             $table->id();
             $table->string('title', 100)->required();
             $table->text('description')->required();
-            $table->integer('video_number')->required();
+            $table->integer('section_number')->required();
             $table->boolean('available')->default(false)->required();
             $table->boolean('premium')->default(false)->required();
             $table->string('cover_image')->nullable();
-            $table->foreignId('user_professor')->required();
-            $table->string('video_url')->nullable();
+            $table->foreignId('professor')->required();
+            $table->foreignId('course')->required();
             $table->timestamps();
         });
 
-        Schema::table('section_videos', function (Blueprint $table) {
-            $table->foreign('user_professor')
+        Schema::table('course_sections', function (Blueprint $table) {
+            $table->foreign('professor')
                 ->references('id')
                 ->on('users')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+
+            $table->foreign('course')
+                ->references('id')
+                ->on('courses')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });
@@ -42,6 +48,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('section_videos');
+        Schema::dropIfExists('course_section');
     }
 };

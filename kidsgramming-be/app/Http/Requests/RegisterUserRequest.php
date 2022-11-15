@@ -2,6 +2,7 @@
 
 namespace App\Http\Requests;
 
+use App\Rules\UniqueSubAccount;
 use Illuminate\Foundation\Http\FormRequest;
 
 class RegisterUserRequest extends FormRequest
@@ -16,7 +17,7 @@ class RegisterUserRequest extends FormRequest
     {
         return [
             'name' => ['required'],
-            'username' => ['required'],
+            'username' => ['required', new UniqueSubAccount],
             'email' => ['nullable', 'email', 'unique:users,email'],
             'sponsor' => ['nullable', 'exists:users,username'],
             'password' => ['required']

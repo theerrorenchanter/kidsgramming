@@ -12,7 +12,7 @@ const reasonTextStyles = {
 export const NothingToShow = ({ reason }) => {
   return (
     <Typography variant='h1' align='center' sx={reasonTextStyles}>
-          No information retrieved due: { reason }
+          { reason }
     </Typography>
   )
 }
