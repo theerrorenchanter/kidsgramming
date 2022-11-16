@@ -1,13 +1,11 @@
-import React from 'react'
-import Sidebar from '../components/Sidebar'
-import { AlumnoRoutes } from '../../alumno/routes/AlumnoRoutes'
 import { useFormik } from 'formik'
 import { useDispatch } from 'react-redux'
 import * as Yup from 'yup'
 
-import { RegisterAlumnoForm } from '../../alumno/views/RegisterAlumnoForm'
+import { RegisterAlumnoForm } from '../views/RegisterAlumnoForm'
 import { Navbar } from '../../navigation/views/Navbar'
-import { AuthLayout } from '../../alumno/layout/AuthLayout'
+import { AuthLayout } from '../layout/AuthLayout'
+
 
 const validations = Yup.object({
   name: Yup.string()
@@ -22,15 +20,7 @@ const validations = Yup.object({
     .required('Password is required')
 })
 
-const AdminAddStudent = () => {
-  /*return (
-    <Sidebar body={
-        <>
-         <h2>Agregar Estudiante</h2>
-         <p> sustituir este parrafo por la pagina para agregar estudiante</p>
-        </>
-    }/>
-  )*/
+export const RegisterAlumnoPage = () => {
   const dispatch = useDispatch()
 
   const authForm = useFormik({
@@ -49,5 +39,3 @@ const AdminAddStudent = () => {
     </>
   )
 }
-
-export default AdminAddStudent

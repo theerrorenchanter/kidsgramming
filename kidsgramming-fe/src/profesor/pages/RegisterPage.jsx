@@ -1,15 +1,11 @@
-import React from 'react'
-import Sidebar from '../components/Sidebar'
-
 import { useFormik } from 'formik'
 import { useDispatch } from 'react-redux'
 import * as Yup from 'yup'
 
 import { Navbar } from '../../navigation/views/Navbar'
 import { startCreatingUserWithUsernamePassword, startLogout } from '../../store/auth/authThunks'
-import { AuthLayout } from '../../profesor/layout/AuthLayout'
-import { RegisterForm } from '../../profesor/views/RegisterForm'
-
+import { AuthLayout } from '../layout/AuthLayout'
+import { RegisterForm } from '../views/RegisterForm'
 
 const validations = Yup.object({
   name: Yup.string()
@@ -28,15 +24,7 @@ const validations = Yup.object({
     .required('Password is required')
 })
 
-const AdminAddTeacher = () => {
-  /*return (
-        <Sidebar body={
-            <>
-             <h2>Agregar Profesor</h2>
-             <p> sustituir este parrafo por la pagina para agregar profesor</p>
-            </>
-        }/>
-  )*/
+export const RegisterPage = () => {
   const dispatch = useDispatch()
 
   const authForm = useFormik({
@@ -60,5 +48,3 @@ const AdminAddTeacher = () => {
     </>
   )
 }
-
-export default AdminAddTeacher

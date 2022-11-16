@@ -1,14 +1,11 @@
-import React from 'react'
-import Sidebar from '../components/Sidebar'
-
 import { useFormik } from 'formik'
 import { useDispatch } from 'react-redux'
 import * as Yup from 'yup'
 
 import { Navbar } from '../../navigation/views/Navbar'
 import { startCreatingUserWithUsernamePassword, startLogout } from '../../store/auth/authThunks'
-import { AuthLayout } from '../../curso/layout/AuthLayout'
-import { AddCourse } from '../../curso/views/AddCourse'
+import { AuthLayout } from '../layout/AuthLayout'
+import { AddCourse } from '../views/AddCourse'
 
 const validations = Yup.object({
   name: Yup.string()
@@ -22,16 +19,7 @@ const validations = Yup.object({
     .trim('The video must be trimmed')
 })
 
-const AdminAddCourse = () => {
-  /*return (
-    <Sidebar body={
-        <>
-         <h2>Agregar Curso</h2>
-         <p> sustituir este parrafo por la pagina para agregar curso</p>
-        </>
-    }/>
-  )*/
-
+export const RegisterPage = () => {
   const dispatch = useDispatch()
 
   const authForm = useFormik({
@@ -54,5 +42,3 @@ const AdminAddCourse = () => {
     </>
   )
 }
-
-export default AdminAddCourse
