@@ -35,5 +35,8 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('/auth/login', 'loginUser')->name('users.login');
 });
 
+Route::get('/courses/sections/videos/{id}', [CourseSectionController::class, 'list'])->name('course.section.videos.list');
+Route::get('/courses/sections/{id}',  [CourseController::class, 'list'])->name('courses.sections.list');
 Route::get('/courses', [CourseController::class, 'listPaginated'])->name('courses.listPaginated');
+Route::get('/courses/{id}', [CourseController::class, 'show'])->name('courses.show');
 Route::get('/suscriptions', [SuscriptionController::class, 'index'])->name('suscriptions.index');

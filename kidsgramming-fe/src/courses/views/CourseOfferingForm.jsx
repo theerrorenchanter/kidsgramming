@@ -10,7 +10,7 @@ export const CourseOfferingForm = ({ courses }) => {
       <Grid container spacing={1} justifyContent="center" >
         {courses.map((course) =>
           <Box key={course.id}>
-            <CourseOverView title={course.title} description={course.description} imageURL={course.cover_image} />
+            <CourseOverView premium={course.premium} title={course.title} description={course.description} imageURL={course.cover_image} courseId={course.id} />
           </Box>)}
       </Grid>
     </>

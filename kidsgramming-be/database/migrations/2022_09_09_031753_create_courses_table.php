@@ -17,15 +17,15 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100)->required();
             $table->text('description')->required();
-            $table->boolean('available')->default(false)->required();
-            $table->boolean('premium')->default(false)->required();
+            $table->boolean('available')->default(true)->nullable();
+            $table->boolean('premium')->default(false)->nullable();
             $table->string('cover_image')->nullable();
-            $table->foreignId('user_professor')->required();
+            $table->foreignId('professor')->required();
             $table->timestamps();
         });
 
         Schema::table('courses', function (Blueprint $table) {
-            $table->foreign('user_professor')
+            $table->foreign('professor')
                 ->references('id')
                 ->on('users')
                 ->onUpdate('cascade')

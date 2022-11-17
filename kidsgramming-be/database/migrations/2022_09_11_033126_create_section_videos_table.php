@@ -16,29 +16,13 @@ return new class extends Migration
         Schema::create('section_videos', function (Blueprint $table) {
             $table->id();
             $table->string('title', 100)->required();
-            $table->text('description')->required();
-            $table->integer('video_number')->required();
-            $table->boolean('available')->default(false)->required();
-            $table->boolean('premium')->default(false)->required();
-            $table->string('cover_image')->nullable();
-            $table->foreignId('professor')->required();
-            $table->foreignId('course_section')->required();
+            $table->text('description')->nullable();
+            $table->integer('video_number')->nullable();
+            $table->boolean('available')->default(true)->nullable();
+            $table->boolean('premium')->default(false)->nullable();
+            $table->foreignId('course_section_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->string('video_url')->nullable();
             $table->timestamps();
-        });
-
-        Schema::table('section_videos', function (Blueprint $table) {
-            $table->foreign('professor')
-                ->references('id')
-                ->on('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
-
-             $table->foreign('course_section')
-                ->references('id')
-                ->on('users')
-                ->onUpdate('cascade')
-                ->onDelete('cascade');
         });
     }
 

@@ -10,7 +10,12 @@ class CourseController extends Controller
 {
     public function createCourse(CreateCourseRequest $request)
     {
-        $course = Course::create($request->all());
+        $course = Course::create([
+            'title' => $request->title,
+            'description' => $request->description,
+            'cover_image' => $request->cover_image,
+            'professor' => $request->user()->id
+        ]);
 
         return response([
             'message' => 'Course created',
@@ -21,5 +26,19 @@ class CourseController extends Controller
     public function listPaginated(Request $request)
     {
         return Course::latest()->paginate(8);
+    }
+
+    public function show($id)
+    {
+        $course = Course::find($id);
+
+        if(!$course) return response(['message' => 'Course not found'], 404);
+
+        return response(['message' => 'Course found', 'course' => $course]);
+    }
+
+    public function list($id)
+    {
+        return Course::find($id)->courseSections;
     }
 }

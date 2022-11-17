@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateCourseRequest;
+use App\Http\Requests\CreateCourseSectionRequest;
 use App\Models\CourseSection;
 
 class CourseSectionController extends Controller
 {
-    public function createCourseSection(CreateCourseRequest $request)
+    public function createCourseSection(CreateCourseSectionRequest $request)
     {
 
         $course = CourseSection::create($request->all());
@@ -16,5 +16,10 @@ class CourseSectionController extends Controller
             'message' => 'Course section created',
             'course_section' => $course
         ]);
+    }
+
+    public function list($id)
+    {
+        return CourseSection::find($id)->sectionVideos;
     }
 }

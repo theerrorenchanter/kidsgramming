@@ -6,8 +6,10 @@ import CardActions from '@mui/material/CardActions'
 import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import PropTypes from 'prop-types'
+import { Link as RouterLink } from 'react-router-dom'
+import { Chip } from '@mui/material'
 
-export const CourseOverView = ({ title, description, imageURL }) => {
+export const CourseOverView = ({ title, description, imageURL, courseId, premium }) => {
   return (
 
         <Grid item sx={{ m: 4, boxShadow: 3 }}>
@@ -29,9 +31,11 @@ export const CourseOverView = ({ title, description, imageURL }) => {
 
             <CardActions>
 
-                <Button sx={{ mx: 'auto' }} size="small" >
+                <Button component={RouterLink} to={`/courses/view/${courseId}`} sx={{ mx: 'auto' }} size="small" >
                     Learn more
                 </Button>
+
+                <Chip label={premium ? 'Premium' : 'Free'} variant="outlined" />
 
             </CardActions>
             </Card>

@@ -9,16 +9,19 @@ import { UAHomeRoutes } from '../home/routes/UAHomeRoutes'
 import { authenticationStatuses } from '../store/auth/authSlice'
 import { SuscriptionesRoutes } from '../suscriptions/routes/SuscriptionesRoutes'
 import { CheckingAuth } from '../ui/views/CheckingAuth'
+import { roleRouterComponent } from '../navigation/routes/roles'
 
 export const AppRouter = () => {
-  const { status } = useSelector(state => state.auth)
+  const { status, roles } = useSelector(state => state.auth)
   if (status === authenticationStatuses.authenticating) return <CheckingAuth />
+
+  const RoutePage = roleRouterComponent[roles]
 
   return (
     <Routes>
         {(status === authenticationStatuses.authenticated)
           ? (<>
-              <Route path='/' element={<AHomeRoutes />} />
+              <Route path='/*' element={<RoutePage />} />
             </>)
           : (<>
               <Route path='/' element={<UAHomeRoutes />} />
@@ -26,11 +29,9 @@ export const AppRouter = () => {
             </>)
         }
 
-          <Route path='admin/*' element={<AdminRoutes />} />
           <Route path='courses/*' element={<CourseRoutes />} />
           <Route path='suscriptions/*' element={<SuscriptionesRoutes />}/>
 
-          <Route path='/*' element={<Navigate to='/' />} />
     </Routes>
 
   )

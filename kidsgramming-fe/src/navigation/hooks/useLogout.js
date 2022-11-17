@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Swal from 'sweetalert2'
 import { startLogout } from '../../store/auth/authThunks'
 import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 
 const initialState = {
   clicked: false
@@ -10,6 +11,7 @@ const initialState = {
 export const useLogout = (init = initialState) => {
   const [clicked, setClicked] = useState(init.clicked)
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (clicked) {
@@ -24,6 +26,7 @@ export const useLogout = (init = initialState) => {
       }).then((result) => {
         if (result.isConfirmed) {
           dispatch(startLogout())
+          navigate('/')
         }
       })
 

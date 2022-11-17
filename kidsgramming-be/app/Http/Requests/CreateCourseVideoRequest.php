@@ -13,7 +13,7 @@ class CreateCourseVideoRequest extends FormRequest
      */
     public function authorize()
     {
-        return $this->user->hasRole('user-professor');
+        return $this->user()->hasRole('user-professor');
     }
 
     /**
@@ -24,13 +24,9 @@ class CreateCourseVideoRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => ['string', 'max:100', 'required', 'unique:courses'],
-            'description' => ['string', 'required'],
-            'available' => ['boolean', 'required'],
-            'premium' => ['boolean', 'required'],
-            'cover_image' => ['string', 'nullable'],
-            'user_professor' => ['numeric', 'exists:users,id'],
-            'video_url' => ['string', 'nullable']
+            'title' => ['string', 'max:100', 'required'],
+            'description' => ['string'],
+            'video_url' => ['string', 'url', 'required']
         ];
     }
 }

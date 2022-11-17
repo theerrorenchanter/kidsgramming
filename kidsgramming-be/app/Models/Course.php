@@ -15,7 +15,7 @@ class Course extends Model
         'available',
         'premium',
         'cover_image',
-        'user_professor'
+        'professor'
     ];
 
     public function courseSections()

@@ -12,10 +12,15 @@ class SectionVideo extends Model
     protected $fillable = [
         'title',
         'description',
+        'video_number',
         'available',
         'premium',
-        'cover_image',
-        'user_professor',
-        'video_number'
+        'course_section_id',
+        'video_url'
     ];
+
+    public function courseSection()
+    {
+        return $this->belongsTo(CourseSection::class);
+    }
 }

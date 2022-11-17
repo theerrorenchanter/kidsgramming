@@ -22,13 +22,34 @@ const premiumSponsorRoutes = {
   }
 }
 
-const studentRoutes = {}
-const professorRoutes = {}
+const freeStudentRoutes = {
+  home: {
+    description: 'Home',
+    to: '/'
+  }
+}
+
+const premiumStudentRoutes = {
+  home: {
+    description: 'Home',
+    to: '/'
+  }
+}
+
+const professorRoutes = {
+  courses: {
+    description: 'Courses',
+    to: '/'
+  }
+}
 
 const roleRoutes = {
   'super-admin': adminRoutes,
   'free-user-owner': freeSponsorRoutes,
-  'premium-user-owner': premiumSponsorRoutes
+  'premium-user-owner': premiumSponsorRoutes,
+  'user-professor': professorRoutes,
+  'free-user-student': freeStudentRoutes,
+  'premium-user-student': premiumStudentRoutes
 }
 
 const initialState = {

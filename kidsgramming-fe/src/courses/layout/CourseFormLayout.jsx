@@ -7,7 +7,7 @@ const paperContainerStyles = {
   display: 'flex',
   flexDirection: 'column',
   width: '100%',
-  height: '600pt',
+  height: '100%',
   p: 3
 }
 
