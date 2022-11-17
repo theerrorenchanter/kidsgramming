@@ -10,7 +10,7 @@ export const RegisterProfessorForm = ({ authForm }) => {
   const { touched, errors, values, handleChange, isSubmitting } = authForm
 
   return (
-    <AuthFormLayout title='Register Professor' imageSource='/auth/img/register.png'>
+    <AuthFormLayout title='Register Professor' imageSource='/auth/img/addteacher.png'>
       <form onSubmit={ authForm.handleSubmit }>
         <Grid container >
           <Grid item xs={12} sx={{ mt: 2 }}>
