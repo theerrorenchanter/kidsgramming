@@ -3,6 +3,21 @@
 
 Educational platform that hosts video-courses for ages between eight and thirteen
 
+## Technology used
+
+- React
+- React router
+- Redux toolkit
+- ESLint
+- Vite
+- Formik
+- Firebase
+- YUP
+- Axios
+- SweetAlert
+- PropTypes
+- Material UI
+- Laravel
 
 ## Requirements
 
