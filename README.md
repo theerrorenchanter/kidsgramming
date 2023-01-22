@@ -1,37 +1,57 @@
-# In order to run the projects, you should follow the next steps:
 
-# kidsgramming-fe
+# Kidsgramming
 
-Requirements:
+Educational platform that hosts video-courses for ages between eight and thirteen
+
+
+## Requirements
 
 - NodeJS
-- NPM
-- Optional: Yarn (First you need npm installed before activating yarn)
-
-
-Steps:
-
-1. To install projects dependencies run `yarn install` inside kidsgramming-fe folder
-2. Then you must run the project using `yarn dev`
-- If you dont have Yarn activated just run `npm run dev`
-
-- Ensure you are running the project on http://localhost:5173
-
-# kidsgramming-be
-
-Requirements:
-
+- NPM or YARN
 - Docker Compose
 
-Steps:
+## Installation
 
-1. First you will need to run the docker compose file of the project by using `docker compose -f docker-compose.yml up` (This must be perform in kidsgramming-be folder)
-2. Then you will be able to see the containers running by using `docker ps`
+First, you will need to download the files of this repository, ```kidsgramming-be``` contains the files for the backend and  ```kidsgramming-be``` for the frontend.
 
-After that, we will need to install backend dependencies, but since we do not have php, composer, etc. installed we need to run a command in the container via an interative bash
+Once you have installed the backend and folder project, first go to the backend file and up the project with docker compose
 
-3. Run `docker exec -it kidsgramming-be-laravel.test-1 composer install` where `kidsgramming-be-laravel.test-1` is the project container name showed by using `docker ps`
-   Then we will have installed a tool called sail which allow us to interact with the project without performing docker commands
-4. Stop docker `CTRL + C` on the terminal
-5. Run the project using `./vendor/bin/sail up` inside backend folder
-6. Serve the project as an api using `./vendor/vin/sail artisan serve` (Ensure the project is running on localhost:8080)
+```bash
+  cd kidsgramming-be
+  docker compose -f docker-compose.yml up
+```
+
+You can see the container name by performing this command
+```bash
+  docker ps
+```
+
+Then, you will need to install the dependencies from inside the container.
+Note that ```kidsgramming-be-laravel.test-1``` is the name of the container
+```bash
+  cd kidsgramming-be
+  docker exec -it kidsgramming-be-laravel.test-1 composer install
+```
+
+Then you will have sail installed, which allow us to perform docker actions in an easier way.
+Let's first stop our running container and up it again using sail
+```bash
+  ./vendor/bin/sail up
+```
+
+Finally, we will have to serve our project using artisan and sail
+```bash
+  ./vendor/vin/sail artisan serve
+```
+
+For our frontend, first we will need to go to the frontend folder and install the dependencies
+```bash
+  cd kidsgramming-fe
+  npm install or yarn install
+```
+
+Then, we will have to run our frontend project, this will give us an URL that we could use
+to open the frontend on our browser
+```bash
+  npm run dev or yarn dev
+```
