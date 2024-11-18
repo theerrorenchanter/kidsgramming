@@ -16,7 +16,7 @@
     "@mui/material": "^5.10.6",
     "@reduxjs/toolkit": "^1.8.5",
     "axios": "^1.0.0",
-    "firebase": "^9.10.0",
+    "firebase": "^10.9.0",
     "formik": "^2.2.9",
     "mui-image": "^1.0.7",
     "prop-types": "^15.8.1",
